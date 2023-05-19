@@ -14,18 +14,21 @@
     <title>True Words Quiz</title>
 </head>
 <body>
-    <h1>True Words Quiz</h1>
-    <div class="container">
-        <h3>Test your vocabulary with our True Words Quiz!...</h3>
-        <p>Enter a username to play</p>
+    <div id="flexbox-container">
+        <h1 id="flex-item1">True Words Quiz</h1>
+        <div class="questions-container flex-item2">
+            <h3>Test your vocabulary with our 
+                <br>
+                True Words Quiz!...</h3>
+            <p>Enter a username to play</p>
         
-        <label for="username">Username</label>
-        <input id="username" type="text" required>
+            <label for="username" >Username</label>
+            <input id="username" type="text"  required>
 
-        <br>
+            <br>
 
-        <button id="play-btn" class="play-btn">Lets Play!</button>
-       
+            <button id="play-btn" class="play-btn">Lets Play!</button>
+        </div>
     </div>
     <script src="assets/js/script.js"></script>
 </body>
