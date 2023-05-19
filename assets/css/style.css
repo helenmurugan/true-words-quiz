@@ -1,7 +1,10 @@
 body {
-    font-family: Indie Flower;
+    font-family: indie flower, sans-serif, arial;
     box-sizing: border-box;
-    background-color: hsla(0, 0%, 50%, 0.5);
+    background-image: url("../images/cover-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 #flexbox-container {
@@ -9,26 +12,34 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    
 }
 
-h1 {
+.container-box {
+    background-color: whitesmoke;
+    border-radius: 25px;
     text-align: center;
-    /* margin-top: 100px; */
+    width: 40vw;
+    height: 50vh;
+    margin: 0 auto;
 }
-
 .questions-container {
     padding: 0;
     margin: 0;
-   
-    width: 40vw;
-    height: 50vh;
-    
-
-    background-color: whitesmoke;
-    text-align: center;
+    font-size: 22px;
 }
 
-.margin {
-    margin: 20px;
+input {
+    font-size: 20px;
+}
+
+.btn {
+    font-size: 25px;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: silver;
+    border-radius: 15px;
+    border: none;
 }
 
