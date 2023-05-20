@@ -6,7 +6,7 @@ body {
     background-repeat: no-repeat;
 }
 
-#flexbox-container {
+#outer-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,13 +14,15 @@ body {
     min-height: 100vh;
 }
 
-.container-box {
+.box {
     background-color: whitesmoke;
     border-radius: 25px;
     text-align: center;
     width: 40vw;
     height: 50vh;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
