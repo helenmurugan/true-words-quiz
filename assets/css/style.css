@@ -1,10 +1,9 @@
 body {
-    font-family: indie flower, sans-serif, arial;
+    font-family: Indie Flower, sans-serif, arial;
     box-sizing: border-box;
     background-image: url("../images/cover-image.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 100vh;
 }
 
 #flexbox-container {
@@ -23,9 +22,14 @@ body {
     height: 50vh;
     margin: 0 auto;
 }
+
+h1 {
+    margin: 25px;
+}
+
 .welcome-container {
     padding: 0;
-    margin: 0;
+    margin: 25px;
     font-size: 22px;
 }
 
@@ -39,7 +43,7 @@ body {
 }
 
 .play-btn {
-    margin-top: 50px;
+    font-family: helvetica;
 }
 
 .btn:hover {
