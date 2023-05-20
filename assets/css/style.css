@@ -18,8 +18,7 @@ body {
     background-color: whitesmoke;
     border-radius: 25px;
     text-align: center;
-    width: 40vw;
-    height: 50vh;
+    width: 50vw;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -91,6 +90,10 @@ a {
 #incorrect {
     color: red;
     font-weight: bold;
+}
+
+.hide {
+    display: none;
 }
 
 
