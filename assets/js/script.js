@@ -22,7 +22,7 @@ const questionBank = [
       definition: "A song or melody that keeps repeating in one’s mind",
       options: [
         {text: "Jinglebug", correct: false}
-        {text: "Earworm ", correct: true}
+        {text: "Earworm", correct: true}
         {text: "Jazzfly", correct: false}
         {text: "Headnut", correct: false}
       ],
@@ -38,100 +38,175 @@ const questionBank = [
     },
     {
       definition: "Endurance training where a runner alternates between sprinting and jogging",
-      options: ["Fartlek", "Sprintjog", "Jogsprint", "Lekfart"],
-      
+      options: [
+        {text: "Lekfart", correct: false}
+        {text: "Sprintjog", correct: false}
+        {text: "Jogsprint", correct: false}
+        {text: "Fartlek", correct: true}
+      ],
     },
     {
       definition: "A lively discussion/argument/dispute",
-      options: ["Argy-bargy", "Stifle-pifle", "Debby-toffy", "Squibstuff"],
-      answer: 0
+      options: [
+        {text: "Stifle-pifle", correct: false}
+        {text: "Argy-bargy", correct: true}
+        {text: "Debby-toffy", correct: false}
+        {text:"Squibstuff", correct: false}
+      ],
     },
     {
       definition: "A sweet, aromatic wine made from green grapes native to North Carolina",
-      options: ["Scuppernong", "Demderbe", "Sonomo", "Vars"],
-      answer: 0
+      options: [
+        {text: "Demderbe", correct: false}
+        {text: "Sonomo", correct: false}
+        {text: "Scuppernong", correct: true}
+        {text:"Vars", correct: false}
+        ],
     },
     {
       definition: "To spend time aimlessly or idle",
-      options: ["Lollygag", "Lazidud", "Idophunkery", "Fruff"],
-      answer: 0
+      options: [
+      {text: "Lazidud", correct: false}
+      {text: "Idophunkery", correct: false}
+      {text: "Lollygag", correct: true}
+      {text: "Fruff", correct: false}
+      ],
     },
     {
       definition: "A shrewd, unprincipled person, especially a politician",
-      options: ["Snollygoster", "Horiposter", "Snibsnab", "Blufrumble"],
-      answer: 0
+      options: [
+      {text: "Snollygoster", correct: true}
+      {text: "Horiposter", correct: false}
+      {text: "Snibsnab", correct: false}
+      {text: "Blufrumble", correct: false}
+      ],
     },
     {
       definition: "A word meaning fierce/savage/destructive",
-      options: ["Cattywampus", "Ferricious", "Crittogus", "Glimmerdash"],
-      answer: 0
+      options: [
+      {text: "Cattywampus", correct: true}
+      {text: "Ferricious", correct: false}
+      {text: "Crittogus", correct: false}
+      {text: "Glimmerdash", correct: false}
+      ],
     },
     {
       definition: "A lover of words",
-      options: ["Logophile", "Wordophile", "Vocabularophile", "Lettophile"],
-      answer: 0
+      options: [
+      {text: "Lettophile", correct: false}
+      {text: "Vocabularophile", correct: false}
+      {text: "Wordophile", correct: false}
+      {text: "Logophile", correct: true}
+      ],
     },
     {
       definition: "To make something more lively or appealing by a small change",
-      options: ["Zhush", "Frush", "Ploomp", "Prizzle"],
-      answer: 0
+      options: [
+      {text: "Ploomp", correct: false}
+      {text: "Frush", correct: false}
+      {text: "Zhuzh", correct: true}
+      {text: "Prizzle", correct: false}
+      ],
     },
     {
       definition: "A common phobia characterised by a fear of public speaking",
-      options: ["Glossophobia", "Pubophobia", "Speakophobia", "Audophobia"],
-      answer: 0
+      options: [
+      {text: "Glossophobia", correct: true}
+      {text: "Pubophobia", correct: false}
+      {text: "Speakophobia", correct: false}
+      {text: "Audophobia", correct: false}
+      ],
     },
     {
       definition: "A group of things linked together in a way to produce a particular result",
-      options: ["Concatenation", "Stringenation", "Pushenation", "Pullenation"],
-      answer: 0
+      options: [
+      {text: "Stringenation", correct: false}
+      {text: "Pushenation", correct: false}
+      {text: "Concatenation", correct: true}
+      {text:"Pullenation", correct: false}
+      ],
     },
     {
       definition: "The science of measurement",
-      options: ["Metrology", "Measury", "Metellogy", "Measology"],
-      answer: 0
+      options: [
+      {text: "Metrology", correct: true}
+      {text: "Measury", correct: false}
+      {text: "Metellogy", correct: false}
+      {text: "Measology", correct: false}
+      ],
     },
     {
       definition: "Floating wreckage of a ship or its cargo",
-      options: ["Flotsam", "Wrecksam", "Sealitter", "Flocean"],
-      answer: 0
+      options: [
+      {text: "Wreaksam", correct: false}
+      {text: "Flotsam", correct: true}
+      {text: "Seaglitter", correct: false}
+      {text: "Flootorum", correct: false}
+    ],
     },
     {
       definition: "The back part of the skull",
-      options: ["Occiput", "Craniut", "Skulliut", "Nutoot"],
-      answer: 0
+      options: [
+      {text: "Craniut", correct: false}
+      {text: "Occiput", correct: true}
+      {text: "Nutoot", correct: false}
+      {text: "Sculliut", correct: false}
+    ],
     },
     {
       definition: "The mouthpiece of a musical instrument",
-      options: ["Embouchure", "Soosh", "Flumblewump", "Bloehole"],
-      answer: 0
+      options: [
+      {text: "Bloehole", correct: false}
+      {text: "Flumblewump", correct: false}
+      {text: "Soosh", correct: false}
+      {text: "Embouchure", correct: true}
+    ],
     },
     {
       definition: "A harsh mixture of sounds",
-      options: ["Cacaphony", "Phonical", "Audiophony", "Bleebar"],
-      answer: 0
+      options: [
+      {text: "Bleebahah", correct: false}
+      {text: "Audiofunky", correct: false}
+      {text: "Cacaphony", correct: true}
+      {text: "Phonidazy", correct: false}
+      ],
     },
     {
       definition: "The act of finding something valuable when you are not looking for it",
-      options: ["Serendipity", "Fruitipidity", "Joyhoy", "Zoobloop"],
-      answer: 0
+      options: [
+      {text: "Zoobloop", correct: false}
+      {text: "Joyhoy", correct: false}
+      {text: "Frutippy", correct: false}
+      {text: "Serendipity", correct: true}
+    ],
     },
     {
       definition: "Language that is meaningless or made unintelligible by excessive use of technical terms",
-      options: ["Gobbledygook", "Gookledegob", "Gookgobble", "Gobblefrobble"],
-      answer: 0
+      options: [
+      {text: "Gobbledygook", correct: true}
+      {text: "Gookledegob", correct: false}
+      {text: "Googooble", correct: false}
+      {text: "Gobblebum", correct: false}
+      ],
     },
     {
       definition: "A word meaning utterly astonished or astounded",
-      options: ["Gobsmacked", "Faceouch", "Mouthshock", "Lipslap"],
-      answer: 0
+      options: [
+      {text: "Gobsmacked", correct: true}
+      {text: "Faceouch", correct: false}
+      {text: "Mouthshock", correct: false}
+      {text: "Lipslap", correct: false}
+      ],
     },
     {
       definition: "A frivolous, flighty or excessively talkative person",
-      options: ["Flibbertigibbet", "Zipperdibbet", "Flubberdub", "Glibberglook"],
-      answer: 0
+      options: [
+      {text: "Glibberdook", correct: false}
+      {text: "Flubberdub", correct: false}
+      {text: "Flibbertigibbet", correct: true}
+      {text: "Zipperdibbet", correct: false}
+      ],
     },
-  
   ];
 
 let definition = document.getElementById("definition");
