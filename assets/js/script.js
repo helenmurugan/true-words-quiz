@@ -209,6 +209,33 @@ const questionBank = [
     },
   ];
 
-let definition = document.getElementById("definition");
-let wordChoices = Array.from(document.getElementsByClassName("word-choice"));
-console.log(wordChoices);
+/* Event Listeners*/
+document.getElementById("play-btn").addEventListener("click", startQuiz());
+document.getElementById("next-btn").addEventListener("click", nextQuestion())
+
+/* Function to start quiz by showing first definition and corresponding word choices*/
+function startQuiz() {
+  let currentQuestion = questionBank[0];
+  let questionNumber = currentQuestionIndex + 1;
+  let definitionElement = document.getElementById("definition");
+  definitionElement.innerHTML = questionNumber + ". " currentQuestion.definition;
+}
+
+/* Function to check answer and display red and green backgrounds as necessary */
+function checkAnswer() {
+
+}
+
+/* Function to display next question*/
+function nextQuestion() {
+  
+}
+
+/* Functions to increment scores */
+function incrementCorrect() {
+
+}
+
+function incrementIncorrect() {
+
+}
