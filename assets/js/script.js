@@ -1,8 +1,8 @@
 
 const questionBank = [
     {
-      definition: "A fledgling pigeon about four weeks old",
-      options: [
+      definition: "A baby pigeon about four weeks old",
+      answers: [
         {text: "Squab", correct: true},
         {text: "Squib", correct: false},
         {text: "Pigeot", correct: false},
@@ -11,7 +11,7 @@ const questionBank = [
     },
     {
       definition: "A word meaning confuse/perplex/fluster",
-      options: [
+      answers: [
         {text: "Squibblebum", correct: false},
         {text: "Dumduffer", correct: false},
         {text: "Fuzzpop", correct: false},
@@ -20,7 +20,7 @@ const questionBank = [
     },
     {
       definition: "A song or melody that keeps repeating in one’s mind",
-      options: [
+      answers: [
         {text: "Jinglebug", correct: false},
         {text: "Earworm", correct: true},
         {text: "Jazzfly", correct: false},
@@ -29,7 +29,7 @@ const questionBank = [
     },
     {
       definition: "A noisy or overexcited reaction or response to something",
-      options: [
+      answers: [
         {text: "Brouhaha", correct: true},
         {text: "Quibbleschnort", correct: false},
         {text: "Hubbadub", correct: false},
@@ -38,7 +38,7 @@ const questionBank = [
     },
     {
       definition: "Endurance training where a runner alternates between sprinting and jogging",
-      options: [
+      answers: [
         {text: "Lekfart", correct: false},
         {text: "Sprintjog", correct: false},
         {text: "Jogsprint", correct: false},
@@ -47,7 +47,7 @@ const questionBank = [
     },
     {
       definition: "A lively discussion/argument/dispute",
-      options: [
+      answers: [
         {text: "Stifle-pifle", correct: false},
         {text: "Argy-bargy", correct: true},
         {text: "Debby-toffy", correct: false},
@@ -56,7 +56,7 @@ const questionBank = [
     },
     {
       definition: "A sweet, aromatic wine made from green grapes native to North Carolina",
-      options: [
+      answers: [
         {text: "Demderbe", correct: false},
         {text: "Sonomo", correct: false},
         {text: "Scuppernong", correct: true},
@@ -65,7 +65,7 @@ const questionBank = [
     },
     {
       definition: "To spend time aimlessly or idle",
-      options: [
+      answers: [
       {text: "Lazidud", correct: false},
       {text: "Idophunkery", correct: false},
       {text: "Lollygag", correct: true},
@@ -74,7 +74,7 @@ const questionBank = [
     },
     {
       definition: "A shrewd, unprincipled person, especially a politician",
-      options: [
+      answers: [
       {text: "Snollygoster", correct: true},
       {text: "Horiposter", correct: false},
       {text: "Snibsnab", correct: false},
@@ -83,7 +83,7 @@ const questionBank = [
     },
     {
       definition: "A word meaning fierce/savage/destructive",
-      options: [
+      answers: [
       {text: "Cattywampus", correct: true},
       {text: "Ferricious", correct: false},
       {text: "Crittogus", correct: false},
@@ -92,7 +92,7 @@ const questionBank = [
     },
     {
       definition: "A lover of words",
-      options: [
+      answers: [
       {text: "Lettophile", correct: false},
       {text: "Vocabularophile", correct: false},
       {text: "Wordophile", correct: false},
@@ -101,7 +101,7 @@ const questionBank = [
     },
     {
       definition: "To make something more lively or appealing by a small change",
-      options: [
+      answers: [
       {text: "Ploomp", correct: false},
       {text: "Frush", correct: false},
       {text: "Zhuzh", correct: true},
@@ -110,7 +110,7 @@ const questionBank = [
     },
     {
       definition: "A common phobia characterised by a fear of public speaking",
-      options: [
+      answers: [
       {text: "Glossophobia", correct: true},
       {text: "Pubophobia", correct: false},
       {text: "Speakophobia", correct: false},
@@ -119,7 +119,7 @@ const questionBank = [
     },
     {
       definition: "A group of things linked together in a way to produce a particular result",
-      options: [
+      answers: [
       {text: "Stringenation", correct: false},
       {text: "Pushenation", correct: false},
       {text: "Concatenation", correct: true},
@@ -128,7 +128,7 @@ const questionBank = [
     },
     {
       definition: "The science of measurement",
-      options: [
+      answers: [
       {text: "Metrology", correct: true},
       {text: "Measury", correct: false},
       {text: "Metellogy", correct: false},
@@ -137,7 +137,7 @@ const questionBank = [
     },
     {
       definition: "Floating wreckage of a ship or its cargo",
-      options: [
+      answers: [
       {text: "Wreaksam", correct: false},
       {text: "Flotsam", correct: true},
       {text: "Seaglitter", correct: false},
@@ -146,7 +146,7 @@ const questionBank = [
     },
     {
       definition: "The back part of the skull",
-      options: [
+      answers: [
       {text: "Craniut", correct: false},
       {text: "Occiput", correct: true},
       {text: "Nutoot", correct: false},
@@ -155,7 +155,7 @@ const questionBank = [
     },
     {
       definition: "The mouthpiece of a musical instrument",
-      options: [
+      answers: [
       {text: "Bloehole", correct: false},
       {text: "Flumblewump", correct: false},
       {text: "Soosh", correct: false},
@@ -164,7 +164,7 @@ const questionBank = [
     },
     {
       definition: "A harsh mixture of sounds",
-      options: [
+      answers: [
       {text: "Bleebahah", correct: false},
       {text: "Audiofunky", correct: false},
       {text: "Cacaphony", correct: true},
@@ -173,7 +173,7 @@ const questionBank = [
     },
     {
       definition: "The act of finding something valuable when you are not looking for it",
-      options: [
+      answers: [
       {text: "Zoobloop", correct: false},
       {text: "Joyhoy", correct: false},
       {text: "Frutippy", correct: false},
@@ -182,7 +182,7 @@ const questionBank = [
     },
     {
       definition: "Language that is meaningless or made unintelligible by excessive use of technical terms",
-      options: [
+      answers: [
       {text: "Gobbledygook", correct: true},
       {text: "Gookledegob", correct: false},
       {text: "Googooble", correct: false},
@@ -191,7 +191,7 @@ const questionBank = [
     },
     {
       definition: "A word meaning utterly astonished or astounded",
-      options: [
+      answers: [
       {text: "Gobsmacked", correct: true},
       {text: "Faceouch", correct: false},
       {text: "Mouthshock", correct: false},
@@ -200,7 +200,7 @@ const questionBank = [
     },
     {
       definition: "A frivolous, flighty or excessively talkative person",
-      options: [
+      answers: [
       {text: "Glibberdook", correct: false},
       {text: "Flubberdub", correct: false},
       {text: "Flibbertigibbet", correct: true},
@@ -220,8 +220,15 @@ function showQuestion() {
   let definitionElement = document.getElementById("definition"); // Locate definition position in html
   definitionElement.innerHTML = questionNumber + ". " + currentQuestion.definition; // Add the question number and definition
 
-  let answerElement = document.getElementsByClassName("answer"); // Locate answer position in html
-  answerElement.innerHTML = currentQuestion.options.text; // Add the answers
+  let answerElement = document.getElementsByClassName("btn-grid"); // Locate answer position inside html grid
+  answerElement.innerHTML = currentQuestion.answers.text; // Add the answers
+
+  currentQuestion.answers.forEach(answer => {
+    const button = document.createElement("button"); // Create a button for each answer in the current question
+    button.innerHTML = answer.text; // Set the answer text for each button
+    button.classList.add("btn") // Add class='btn' to each button
+    answerElement.appendChild(button); // Add button as a child of the answerElement or btn-grid for each answer
+  });
   
 }
 
@@ -248,9 +255,8 @@ function incrementIncorrect() {
 
 // Event Listeners
 
-// If next button exists
-if (document.getElementById("next-btn")) {
+if (document.getElementById("next-btn")) { // If next button exists
   showQuestion()
-  document.getElementById("next-btn").addEventListener("click", showQuestion);
+  document.getElementById("next-btn").addEventListener("click", showQuestion); // run showQuestion function when Next button is clicked
 }
 
