@@ -43,16 +43,13 @@ h1 {
     border: none;
 }
 
-.play-button {
-    font-family: helvetica;
-}
-
 .btn:hover {
     background-color: black;
     color: silver;
 }
 
 a {
+    font-family: helvetica;
     color: black;
     text-decoration: none;
 }

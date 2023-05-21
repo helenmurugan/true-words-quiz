@@ -209,32 +209,30 @@ const questionBank = [
     },
   ];
 
-/* The index for tracking the array index from the questionBank */
+// Variable for tracking the array index in the questionBank
 let questionNumber = 0;
 
-/* Function to start quiz by showing first definition and corresponding word choices*/
-function startQuiz() {
-/* The current question to get from the questionBank */
-  let currentQuestion = questionBank[questionNumber];
+// Function to start quiz by showing first definition and corresponding word choices
+function showQuestion() {
+  let currentQuestion = questionBank[questionNumber]; // The current question to get from the questionBank
+  questionNumber = questionNumber + 1; // Increase questionNumber for the next question
 
-/* Increase questionNumber for the next question */
-  questionNumber = questionNumber + 1;
+  let definitionElement = document.getElementById("definition"); // Locate definition position in html
+  definitionElement.innerHTML = questionNumber + ". " + currentQuestion.definition; // Add the question number and definition
 
-  let definitionElement = document.getElementById("definition");
-
-/* Add the question number and definition */
-  definitionElement.innerHTML = questionNumber + ". " + currentQuestion.definition;
-  console.log(definition);
+  let answerElement = document.getElementsByClassName("answer"); // Locate answer position in html
+  answerElement.innerHTML = currentQuestion.options.text; // Add the answers
+  
 }
 
 
 
-/* Functions to check answer, display red and green backgrounds as necessary, and show 'Next' button */
+// Function to check answer, display red and green backgrounds, and show 'Next' button
 function checkAnswer() {
 
 }
 
-/* Function to display next question with updated scores*/
+// Function to display next question with updated scores
 function nextQuestion() {
   
 }
@@ -252,7 +250,7 @@ function incrementIncorrect() {
 
 // If next button exists
 if (document.getElementById("next-btn")) {
-  startQuiz()
-  document.getElementById("next-btn").addEventListener("click", startQuiz);
+  showQuestion()
+  document.getElementById("next-btn").addEventListener("click", showQuestion);
 }
 
