@@ -68,7 +68,7 @@ const questionBank = [
       {text: "Lazidud", correct: false},
       {text: "Idophunkery", correct: false},
       {text: "Lollygag", correct: true},
-      {text: "Fruff", correct: false}
+      {text: "Fruffing", correct: false}
       ],
     },
     {
@@ -210,16 +210,21 @@ const questionBank = [
 
 let questionNumber = 0; // Variable for tracking the array index in the questionBank
 let nextButton = document.getElementById("next-btn"); // Variable for switching Next button class between hide and display
+const shuffledQuestions = questionBank.sort(() => Math.random() - .5); // Shuffles the questionBank array once at the start of the game
 
+// Function to start quiz by shuffling questions and showing the question
+function startGame() {
+  
+  showQuestion()
+}
 
 // Function to start quiz by showing first definition and corresponding word choices
 function showQuestion() {
-  // resetState();
 
-  let currentQuestion = questionBank[questionNumber]; // The current question to get from the questionBank
-  questionNumber = questionNumber + 1; // Increase questionNumber for the next question
+  let currentQuestion = shuffledQuestions[questionNumber]; // The current question to get from the shuffled questions array
+  questionNumber = questionNumber + 1; // Increase questionNumber so that the user sees the number of the question starting at 1
 
-  let definitionElement = document.getElementById("definition"); // Locate definition position in html
+  let definitionElement = document.getElementById("definition"); // Locate definition element in html
   definitionElement.innerHTML = questionNumber + ". " + currentQuestion.definition; // Add the question number and definition
 
   let answerElement = document.getElementById("btn-grid"); // Locate answer position inside html grid
@@ -233,14 +238,6 @@ function showQuestion() {
   
 }
 
-// Function to reset the state of the game by hiding Next button and hiding original html answer buttons
-// function resetState() {
-//   nextButton.classList.add("hide");
-//   while (answerElement.firstChild) { // While the answerElement has a first child
-//     answerElement.removeChild // Remove child from answerElement
-//     (answerElement.firstChild) // Remove the first child 
-//   }
-// }
 
 // Function to check answer, display red and green backgrounds, and show 'Next' button
 function checkAnswer() {
@@ -263,8 +260,8 @@ function incrementIncorrect() {
 
 // Event Listeners
 
-if (document.getElementById("next-btn")) { // If next button exists
-  showQuestion()
+if (document.getElementById("next-btn")) { // If next button exists when page is loaded run startGame function
+  startGame()
   document.getElementById("next-btn").addEventListener("click", showQuestion); // run showQuestion function when Next button is clicked
 }
 
