@@ -229,7 +229,6 @@ function showQuestion() {
     button.innerHTML = answer.text; // Set the answer text for each button
     button.classList.add("btn") // Add class='btn' to each button
     answerElement.appendChild(button); // Add button as a child of the answerElement (btn-grid) for each answer
-  
   });
   
 }
