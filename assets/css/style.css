@@ -61,7 +61,7 @@ a {
     margin: 25px;
 }
 
-.btn-grid {
+#btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 10px;

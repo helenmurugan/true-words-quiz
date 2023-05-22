@@ -1,7 +1,6 @@
-
 const questionBank = [
     {
-      definition: "A baby pigeon about four weeks old",
+      definition: "A young pigeon about four weeks old",
       answers: [
         {text: "Squab", correct: true},
         {text: "Squib", correct: false},
@@ -209,30 +208,40 @@ const questionBank = [
     },
   ];
 
-// Variable for tracking the array index in the questionBank
-let questionNumber = 0;
+let questionNumber = 0; // Variable for tracking the array index in the questionBank
+let nextButton = document.getElementById("next-btn"); // Variable for switching Next button class between hide and display
+
 
 // Function to start quiz by showing first definition and corresponding word choices
 function showQuestion() {
+  // resetState();
+
   let currentQuestion = questionBank[questionNumber]; // The current question to get from the questionBank
   questionNumber = questionNumber + 1; // Increase questionNumber for the next question
 
   let definitionElement = document.getElementById("definition"); // Locate definition position in html
   definitionElement.innerHTML = questionNumber + ". " + currentQuestion.definition; // Add the question number and definition
 
-  let answerElement = document.getElementsByClassName("btn-grid"); // Locate answer position inside html grid
-  answerElement.innerHTML = currentQuestion.answers.text; // Add the answers
+  let answerElement = document.getElementById("btn-grid"); // Locate answer position inside html grid
 
   currentQuestion.answers.forEach(answer => {
     const button = document.createElement("button"); // Create a button for each answer in the current question
     button.innerHTML = answer.text; // Set the answer text for each button
     button.classList.add("btn") // Add class='btn' to each button
-    answerElement.appendChild(button); // Add button as a child of the answerElement or btn-grid for each answer
+    answerElement.appendChild(button); // Add button as a child of the answerElement (btn-grid) for each answer
+  
   });
   
 }
 
-
+// Function to reset the state of the game by hiding Next button and hiding original html answer buttons
+// function resetState() {
+//   nextButton.classList.add("hide");
+//   while (answerElement.firstChild) { // While the answerElement has a first child
+//     answerElement.removeChild // Remove child from answerElement
+//     (answerElement.firstChild) // Remove the first child 
+//   }
+// }
 
 // Function to check answer, display red and green backgrounds, and show 'Next' button
 function checkAnswer() {
