@@ -67,13 +67,21 @@ a {
     gap: 10px;
 }
 
-/* the selected answer buttons */
+/* these classes are assigned when the buttons are selected */
 .correct {
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.5);;
 }
 
 .incorrect {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.5);;
+}
+
+.correct:hover {
+    background-color: rgba(0, 128, 0, 0.5);;
+}
+
+.incorrect:hover {
+    background-color: rgba(255, 0, 0, 0.5);;
 }
 
 /* the scores */
@@ -103,6 +111,4 @@ a {
 .hide {
     display: none;
 }
-
-
 

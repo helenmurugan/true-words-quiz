@@ -239,27 +239,28 @@ function showQuestion() {
     }
     button.addEventListener("click", selectAnswer); // Run selectAnswer function when any button is clicked
   });
-  
 }
-
 
 // Function to check answer, display red and green backgrounds, and show 'Next' button
 function selectAnswer(e) { 
   const selectedButton = e.target; // Defines selectButton as the clicked on target
-  const isCorrect = selectedButton.datset.correct === "true" // Checks whether the selected Button has correct in the dataset 
-
+  const isCorrect = selectedButton.dataset.correct === "true"; // Checks whether the selected Button has correct in the dataset 
   if (isCorrect) {
-    selectedButton.classList.add("correct"); // If the asnwer is correct add a class of correct to the selected button
+    selectedButton.classList.add("correct"); // If the answer is correct add a class of correct to the selected button
+    console.log("isCorrect");
   } else {
-    selectedButton.classList.add("incorrected"); // Else add a class of incorrect to the selected button
-  }}
+    selectedButton.classList.add("incorrect"); // Else add a class of incorrect to the selected button
+    console.log("incorrect");
+  }
+}
+
 
 // Function to display next question with updated scores
 function nextQuestion() {
   
 }
 
-/* Functions to increment scores */
+// Functions to increment scores
 function incrementCorrect() {
 
 }
