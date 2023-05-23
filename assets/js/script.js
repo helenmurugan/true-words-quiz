@@ -210,11 +210,10 @@ const questionBank = [
 
 let questionNumber = 0; // Variable for tracking the array index in the questionBank
 let nextButton = document.getElementById("next-btn"); // Variable for switching Next button class between hide and display
-const shuffledQuestions = questionBank.sort(() => Math.random() - .5); // Shuffles the questionBank array once at the start of the game
+const shuffledQuestions = questionBank.sort(() => Math.random() - .5); // Shuffles the questionBank array
 
 // Function to start quiz by shuffling questions and showing the question
 function startGame() {
-  
   showQuestion()
 }
 
@@ -234,15 +233,26 @@ function showQuestion() {
     button.innerHTML = answer.text; // Set the answer text for each button
     button.classList.add("btn") // Add class='btn' to each button
     answerElement.appendChild(button); // Add button as a child of the answerElement (btn-grid) for each answer
+
+    if (answer.correct) { // If the answer is correct add a data attribute for correct onto the button element, so that we can later check if its correct
+      button.dataset.correct = answer.correct;
+    }
+    button.addEventListener("click", selectAnswer); // Run selectAnswer function when any button is clicked
   });
   
 }
 
 
 // Function to check answer, display red and green backgrounds, and show 'Next' button
-function checkAnswer() {
+function selectAnswer(e) { 
+  const selectedButton = e.target; // Defines selectButton as the clicked on target
+  const isCorrect = selectedButton.datset.correct === "true" // Checks whether the selected Button has correct in the dataset 
 
-}
+  if (isCorrect) {
+    selectedButton.classList.add("correct"); // If the asnwer is correct add a class of correct to the selected button
+  } else {
+    selectedButton.classList.add("incorrected"); // Else add a class of incorrect to the selected button
+  }}
 
 // Function to display next question with updated scores
 function nextQuestion() {

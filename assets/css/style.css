@@ -67,6 +67,16 @@ a {
     gap: 10px;
 }
 
+/* the selected answer buttons */
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
+
+/* the scores */
 .score-area {
     margin: 5px auto;
     width: 30%;
@@ -79,16 +89,17 @@ a {
     margin: 0;
 }
 
-#correct {
+#correct-score {
     color: green;
     font-weight: bold;
 }
 
-#incorrect {
+#incorrect-score {
     color: red;
     font-weight: bold;
 }
 
+/* Next button*/
 .hide {
     display: none;
 }
