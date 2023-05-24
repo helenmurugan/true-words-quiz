@@ -76,12 +76,9 @@ a {
     background-color: rgba(255, 0, 0, 0.5);;
 }
 
-.correct:hover {
-    background-color: rgba(0, 128, 0, 0.5);;
-}
-
-.incorrect:hover {
-    background-color: rgba(255, 0, 0, 0.5);;
+button:disabled {
+    color: black;
+    pointer-events: none;
 }
 
 /* the scores */
