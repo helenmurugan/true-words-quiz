@@ -209,6 +209,7 @@ const questionBank = [
   ];
 
 let questionNumber = 0; // Variable for tracking the array index in the questionBank
+let answerElement = document.getElementById("btn-grid"); // Locate answer position inside html grid
 let nextButton = document.getElementById("next-btn"); // Variable for switching Next button class between hide and display
 const shuffledQuestions = questionBank.sort(() => Math.random() - .5); // Shuffles the questionBank array
 
@@ -225,8 +226,6 @@ function showQuestion() {
 
   let definitionElement = document.getElementById("definition"); // Locate definition element in html
   definitionElement.innerHTML = questionNumber + ". " + currentQuestion.definition; // Add the question number and definition
-
-  let answerElement = document.getElementById("btn-grid"); // Locate answer position inside html grid
 
   currentQuestion.answers.forEach(answer => {
     const button = document.createElement("button"); // Create a button for each answer in the current question
@@ -247,11 +246,16 @@ function selectAnswer(e) {
   const isCorrect = selectedButton.dataset.correct === "true"; // Checks whether the selected Button has correct in the dataset 
   if (isCorrect) {
     selectedButton.classList.add("correct"); // If the answer is correct add a class of correct to the selected button
-    console.log("isCorrect");
   } else {
     selectedButton.classList.add("incorrect"); // Else add a class of incorrect to the selected button
-    console.log("incorrect");
   }
+  Array.from(answerElement.children).forEach(button => { // Create an array for the answer buttons so we can loop
+    if (button.dataset.correct === "true") { // Condition being checked
+      button.classList.add("correct"); // Add a class of correct to the correct answer so that it turns green when the incorrect answer is selected
+    }
+    button.disabled = true; // Disable the buttons
+  });
+  // nextButton.style.diplay
 }
 
 
