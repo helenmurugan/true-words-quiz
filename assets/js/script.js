@@ -141,7 +141,7 @@ const questionBank = [
       {text: "Flotsam", correct: true},
       {text: "Seaglitter", correct: false},
       {text: "Flootorum", correct: false}
-    ],
+      ],
     },
     {
       definition: "The back part of the skull",
@@ -150,7 +150,7 @@ const questionBank = [
       {text: "Occiput", correct: true},
       {text: "Nutoot", correct: false},
       {text: "Sculliut", correct: false}
-    ],
+      ],
     },
     {
       definition: "The mouthpiece of a musical instrument",
@@ -159,7 +159,7 @@ const questionBank = [
       {text: "Flumblewump", correct: false},
       {text: "Soosh", correct: false},
       {text: "Embouchure", correct: true}
-    ],
+      ],
     },
     {
       definition: "A harsh mixture of sounds",
@@ -177,7 +177,7 @@ const questionBank = [
       {text: "Joyhoy", correct: false},
       {text: "Frutippy", correct: false},
       {text: "Serendipity", correct: true}
-    ],
+      ],
     },
     {
       definition: "Language that is meaningless or made unintelligible by excessive use of technical terms",
@@ -209,30 +209,25 @@ const questionBank = [
   ];
 
 let questionNumber = 0; // Variable for tracking the array index in the questionBank
-let answerElement = document.getElementById("btn-grid"); // Locate answer position inside html grid
-let nextButton = document.getElementById("next-btn"); // Variable for switching Next button class between hide and display
+let answerElement = document.getElementById("btn-grid"); 
+let nextButton = document.getElementById("next-btn"); 
 const shuffledQuestions = questionBank.sort(() => Math.random() - .5); // Shuffles the questionBank array
 
-// Function to start quiz by shuffling questions and showing the question
-function startGame() {
-  showQuestion()
-}
-
-// Function to start quiz by showing first definition and corresponding word choices
+// Function to start quiz and show next question
 function showQuestion() {
   resetState();
 
   let currentQuestion = shuffledQuestions[questionNumber]; // The current question to get from the shuffled questions array
   questionNumber = questionNumber + 1; // Increase questionNumber so that the user sees the number of the question starting at 1
 
-  let definitionElement = document.getElementById("definition"); // Locate definition element in html
-  definitionElement.innerHTML = questionNumber + ". " + currentQuestion.definition; // Add the question number and definition
+  let definitionElement = document.getElementById("definition"); 
+  definitionElement.innerHTML = questionNumber + ". " + currentQuestion.definition; // Set the question number and definition
 
   currentQuestion.answers.forEach(answer => {
-    const button = document.createElement("button"); // Create a button for each answer in the current question
-    button.innerHTML = answer.text; // Set the answer text for each button
-    button.classList.add("btn") // Add class='btn' to each button
-    answerElement.appendChild(button); // Add button as a child of the answerElement (btn-grid) for each answer
+    const button = document.createElement("button"); 
+    button.innerHTML = answer.text; 
+    button.classList.add("btn") 
+    answerElement.appendChild(button);
 
     if (answer.correct) { // If the answer is correct add a data attribute for correct onto the button element, so that we can later check if its correct
       button.dataset.correct = answer.correct;
@@ -248,23 +243,23 @@ function selectAnswer(e) {
   const isCorrect = selectedButton.dataset.correct === "true"; // Checks whether the selected Button has correct in the dataset 
 
   if (isCorrect) {
-    selectedButton.classList.add("correct"); // If the answer is correct add a class of correct to the selected button
+    selectedButton.classList.add("correct"); 
   } else {
-    selectedButton.classList.add("incorrect"); // Else add a class of incorrect to the selected button
+    selectedButton.classList.add("incorrect"); 
   }
 
   Array.from(answerElement.children).forEach(button => { // Create an array for the answer buttons so we can loop
-    if (button.dataset.correct === "true") { // Condition being checked
+    if (button.dataset.correct === "true") { 
       button.classList.add("correct"); // Add a class of correct to the correct answer so that it turns green when the incorrect answer is selected
     }
-    button.disabled = true; // Disable the buttons
+    button.disabled = true; 
   });
 
   nextButton.style.display = "block";
 }
 
 
-// Function to remove answer buttons from prebvious question
+// Function to remove answer buttons from previous question
 function resetState() {
   nextButton.style.display = "none";
 
@@ -285,7 +280,7 @@ function incrementIncorrect() {
 // Event Listeners
 
 if (document.getElementById("next-btn")) { // If next button exists when page is loaded run startGame function
-  startGame()
+  showQuestion()
   document.getElementById("next-btn").addEventListener("click", showQuestion); // run showQuestion function when Next button is clicked
 }
 
