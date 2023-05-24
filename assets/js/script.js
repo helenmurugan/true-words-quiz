@@ -220,6 +220,7 @@ function startGame() {
 
 // Function to start quiz by showing first definition and corresponding word choices
 function showQuestion() {
+  resetState();
 
   let currentQuestion = shuffledQuestions[questionNumber]; // The current question to get from the shuffled questions array
   questionNumber = questionNumber + 1; // Increase questionNumber so that the user sees the number of the question starting at 1
@@ -242,26 +243,34 @@ function showQuestion() {
 
 // Function to check answer, display red and green backgrounds, and show 'Next' button
 function selectAnswer(e) { 
+
   const selectedButton = e.target; // Defines selectButton as the clicked on target
   const isCorrect = selectedButton.dataset.correct === "true"; // Checks whether the selected Button has correct in the dataset 
+
   if (isCorrect) {
     selectedButton.classList.add("correct"); // If the answer is correct add a class of correct to the selected button
   } else {
     selectedButton.classList.add("incorrect"); // Else add a class of incorrect to the selected button
   }
+
   Array.from(answerElement.children).forEach(button => { // Create an array for the answer buttons so we can loop
     if (button.dataset.correct === "true") { // Condition being checked
       button.classList.add("correct"); // Add a class of correct to the correct answer so that it turns green when the incorrect answer is selected
     }
     button.disabled = true; // Disable the buttons
   });
-  // nextButton.style.diplay
+
+  nextButton.style.display = "block";
 }
 
 
-// Function to display next question with updated scores
-function nextQuestion() {
-  
+// Function to remove answer buttons from prebvious question
+function resetState() {
+  nextButton.style.display = "none";
+
+  while (answerElement.firstChild) {
+    answerElement.removeChild(answerElement.firstChild);
+  }
 }
 
 // Functions to increment scores
