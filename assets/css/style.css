@@ -104,6 +104,10 @@ button:disabled {
     font-weight: bold;
 }
 
+.score-span {
+    margin-left: 10px;
+}
+
 /* Next button*/
 .hide {
     display: none;

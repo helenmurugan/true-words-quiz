@@ -213,7 +213,7 @@ let answerElement = document.getElementById("btn-grid");
 let nextButton = document.getElementById("next-btn"); 
 const shuffledQuestions = questionBank.sort(() => Math.random() - .5); // Shuffles the questionBank array
 
-// Function to start quiz and show next question
+// Function to start quiz and show question
 function showQuestion() {
   resetState();
 
@@ -236,16 +236,18 @@ function showQuestion() {
   });
 }
 
-// Function to check answer, display red and green backgrounds, and show 'Next' button
+// Function to check answer, display feedback, and show 'Next' button
 function selectAnswer(e) { 
 
   const selectedButton = e.target; // Defines selectButton as the clicked on target
   const isCorrect = selectedButton.dataset.correct === "true"; // Checks whether the selected Button has correct in the dataset 
 
   if (isCorrect) {
-    selectedButton.classList.add("correct"); 
+    selectedButton.classList.add("correct");
+    incrementCorrect(); 
   } else {
-    selectedButton.classList.add("incorrect"); 
+    selectedButton.classList.add("incorrect");
+    incrementIncorrect();
   }
 
   Array.from(answerElement.children).forEach(button => { // Create an array for the answer buttons so we can loop
@@ -258,7 +260,6 @@ function selectAnswer(e) {
   nextButton.style.display = "block";
 }
 
-
 // Function to remove answer buttons from previous question
 function resetState() {
   nextButton.style.display = "none";
@@ -268,19 +269,34 @@ function resetState() {
   }
 }
 
+// Function to limit the quiz to 10 questions and then show results
+function nextQuestion () {
+  if (questionNumber < 10) {
+  showQuestion();
+  console.log("less than 10");
+} else {
+  showResults();
+}}
+
+// Function to limit the quiz to 10 questions and then show results
+function showResults () {
+
+}
+
 // Functions to increment scores
 function incrementCorrect() {
-
+  let oldScore = parseInt(document.getElementById("correct-score").innerText);
+  document.getElementById("correct-score").innerText = ++oldScore;
 }
 
 function incrementIncorrect() {
-
+  let oldScore = parseInt(document.getElementById("incorrect-score").innerText);
+  document.getElementById("incorrect-score").innerText = ++oldScore;
 }
 
 // Event Listeners
-
 if (document.getElementById("next-btn")) { // If next button exists when page is loaded run startGame function
   showQuestion()
-  document.getElementById("next-btn").addEventListener("click", showQuestion); // run showQuestion function when Next button is clicked
+  document.getElementById("next-btn").addEventListener("click", nextQuestion); // run showQuestion function when Next button is clicked
 }
 
