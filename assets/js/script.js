@@ -278,7 +278,7 @@ function nextQuestion () {
   showResults();
 }}
 
-// Function to limit the quiz to 10 questions and then show results
+// Function to show score and Play Again button
 function showResults () {
 
 }

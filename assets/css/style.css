@@ -14,7 +14,7 @@ body {
     min-height: 100vh;
 }
 
-.box {
+#box {
     background-color: whitesmoke;
     border-radius: 25px;
     text-align: center;
@@ -26,12 +26,6 @@ body {
 
 h1 {
     margin: 25px;
-}
-
-.welcome-container {
-    padding: 0;
-    margin: 25px;
-    font-size: 22px;
 }
 
 .btn {
@@ -82,7 +76,7 @@ button:disabled {
 }
 
 /* the scores */
-.score-area {
+#score-area {
     margin: 5px auto;
     width: 30%;
     font-size: 1.2rem;
@@ -113,3 +107,25 @@ button:disabled {
     display: none;
 }
 
+/* media queries */
+
+@media screen and (max-width: 800px) {
+    #box {
+        width: 90vw;
+        margin: 0;
+        height: 350px;
+    }
+
+    #definition {
+        font-size: 18px;
+        margin: 0;
+    }
+    .btn {
+        font-size: 16px;
+    }
+
+    #score-area {
+        width: 100%;
+    }
+
+}
