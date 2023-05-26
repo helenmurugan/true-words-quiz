@@ -24,6 +24,11 @@ body {
     flex-direction: column;
 }
 
+#welcome-text {
+    padding: 10px;
+    margin: 0;
+}
+
 h1 {
     margin: 25px;
 }
@@ -52,7 +57,7 @@ a {
 #definition {
     font-size: 25px;
     padding: 25px;
-    margin: 25px;
+    /* margin: 25px; */
 }
 
 #btn-grid {
@@ -102,23 +107,35 @@ button:disabled {
     margin-left: 10px;
 }
 
-/* Next button*/
+/* next button*/
 .hide {
     display: none;
 }
 
 /* media queries */
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 376px) and (max-width: 800px) {
+    #box {
+        width: 75vw;
+}
+}
+
+@media screen and (max-width: 375px) {
     #box {
         width: 90vw;
         margin: 0;
-        height: 350px;
+        height: 355px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin: 20px;
     }
 
     #definition {
         font-size: 18px;
         margin: 0;
+        height: 75px;
     }
     .btn {
         font-size: 16px;
