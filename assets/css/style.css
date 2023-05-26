@@ -57,7 +57,6 @@ a {
 #definition {
     font-size: 25px;
     padding: 25px;
-    /* margin: 25px; */
 }
 
 #btn-grid {
@@ -83,7 +82,6 @@ button:disabled {
 /* the scores */
 #score-area {
     margin: 5px auto;
-    width: 30%;
     font-size: 1.2rem;
 }
 
@@ -112,12 +110,27 @@ button:disabled {
     display: none;
 }
 
+.next-button {
+   
+}
+
 /* media queries */
 
 @media screen and (min-width: 376px) and (max-width: 800px) {
     #box {
         width: 75vw;
-}
+        height: 440px;
+    }
+
+    #definition {
+        font-size: 20px;
+        margin: 0;
+        height: 90px;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -137,6 +150,7 @@ button:disabled {
         margin: 0;
         height: 75px;
     }
+
     .btn {
         font-size: 16px;
     }
@@ -144,5 +158,4 @@ button:disabled {
     #score-area {
         width: 100%;
     }
-
 }

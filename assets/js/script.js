@@ -226,7 +226,8 @@ function showQuestion() {
   currentQuestion.answers.forEach(answer => {
     const button = document.createElement("button"); 
     button.innerHTML = answer.text; 
-    button.classList.add("btn") 
+    button.classList.add("btn");
+    button.classList.add("answer-btn") // for styling separately to the next-button
     answerElement.appendChild(button);
 
     if (answer.correct) { // If the answer is correct add a data attribute for correct onto the button element, so that we can later check if its correct
