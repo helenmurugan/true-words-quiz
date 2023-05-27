@@ -285,7 +285,15 @@ function showScore () {
   resetState();
   questionElement.innerHTML = `You scored ${oldScore}/10!`;
 
-  document.getElementById("score-area").innerHTML = "none"
+  if (oldScore === 10) {
+    document.getElementById("score-area").innerHTML = "Congratulations! You are a True Word Genius!";
+  } else if (oldScore >= 7 && oldScore <= 9) {
+    document.getElementById("score-area").innerHTML = "Wow! You are almost an expert vocabularian. Keep playing!";
+  } else if (oldScore >= 1 && oldScore <= 6) {
+    document.getElementById("score-area").innerHTML = "Great effort! Keep playing!";
+  } else {
+    document.getElementById("score-area").innerHTML = "You can only get better. Keep playing!";
+  }
 
   nextButton.style.display = "block";
   nextButton.innerHTML = "Play Again!";
