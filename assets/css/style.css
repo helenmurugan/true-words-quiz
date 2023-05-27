@@ -35,7 +35,7 @@ h1 {
 
 .btn {
     font-size: 25px;
-    padding: 10px;
+    padding: 10px 0 10px 0;
     margin: 10px;
     background-color: silver;
     border-radius: 15px;
@@ -54,9 +54,14 @@ a {
 }
 
 /*quiz page*/
+.quiz-box-height {
+    height: 405px;
+} 
+
 #definition {
     font-size: 25px;
     padding: 25px;
+    height: 90px;
 }
 
 #btn-grid {
@@ -65,7 +70,6 @@ a {
     gap: 10px;
 }
 
-/* these classes are assigned when the buttons are selected */
 .correct {
     background-color: rgba(0, 128, 0, 0.5);;
 }
@@ -79,7 +83,6 @@ button:disabled {
     pointer-events: none;
 }
 
-/* the scores */
 #score-area {
     margin: 5px auto;
     font-size: 1.2rem;
@@ -105,18 +108,13 @@ button:disabled {
     margin-left: 10px;
 }
 
-/* next button*/
 .hide {
     display: none;
 }
 
-.next-button {
-   
-}
-
 /* media queries */
 
-@media screen and (min-width: 376px) and (max-width: 800px) {
+@media screen and (min-width: 376px) and (max-width: 900px) {
     #box {
         width: 75vw;
     }
