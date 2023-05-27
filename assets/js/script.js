@@ -209,7 +209,9 @@ const questionBank = [
   ];
 
 let questionNumber = 0; // Variable for tracking the array index in the questionBank
-let answerElement = document.getElementById("btn-grid"); 
+let questionElement = document.getElementById("definition"); 
+let answerElement = document.getElementById("btn-grid");
+let oldScore = parseInt(document.getElementById("correct-score").innerText);
 let nextButton = document.getElementById("next-btn"); 
 const shuffledQuestions = questionBank.sort(() => Math.random() - .5); // Shuffles the questionBank array
 
@@ -220,8 +222,7 @@ function showQuestion() {
   let currentQuestion = shuffledQuestions[questionNumber]; // The current question to get from the shuffled questions array
   questionNumber = questionNumber + 1; // Increase questionNumber so that the user sees the number of the question starting at 1
 
-  let definitionElement = document.getElementById("definition"); 
-  definitionElement.innerHTML = questionNumber + ". " + currentQuestion.definition; // Set the question number and definition
+  questionElement.innerHTML = questionNumber + ". " + currentQuestion.definition; // Set the question number and definition
 
   currentQuestion.answers.forEach(answer => {
     const button = document.createElement("button"); 
@@ -276,17 +277,22 @@ function nextQuestion () {
   showQuestion();
   console.log("less than 10");
 } else {
-  showResults();
+  showScore();
 }}
 
 // Function to show score and Play Again button
-function showResults () {
+function showScore () {
+  resetState();
+  questionElement.innerHTML = `You scored ${oldScore}/10!`;
 
+  document.getElementById("score-area").innerHTML = "none"
+
+  nextButton.style.display = "block";
+  nextButton.innerHTML = "Play Again!";
 }
 
 // Functions to increment scores
 function incrementCorrect() {
-  let oldScore = parseInt(document.getElementById("correct-score").innerText);
   document.getElementById("correct-score").innerText = ++oldScore;
 }
 
