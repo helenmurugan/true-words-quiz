@@ -321,7 +321,6 @@ function resetScore () {
 
   let incorrectScore = document.getElementById("incorrect-score");
   incorrectScore.innerText = 0;
-  console.log("scores have been reset");
 }
 
 // Functions to increment scores
