@@ -56,10 +56,10 @@ const questionBank = [
     {
       definition: "A sweet, aromatic wine made from green grapes native to North Carolina",
       answers: [
-        {text: "Demderbe", correct: false},
-        {text: "Sonomo", correct: false},
+        {text: "Vinonong", correct: false},
+        {text: "Noonong", correct: false},
         {text: "Scuppernong", correct: true},
-        {text:"Vars", correct: false}
+        {text:"Varsenong", correct: false}
         ],
     },
     {
@@ -174,8 +174,8 @@ const questionBank = [
       definition: "The act of finding something valuable when you are not looking for it",
       answers: [
       {text: "Zoobloop", correct: false},
-      {text: "Joyhoy", correct: false},
-      {text: "Frutippy", correct: false},
+      {text: "Quiblitz", correct: false},
+      {text: "Zonky", correct: false},
       {text: "Serendipity", correct: true}
       ],
     },
@@ -208,14 +208,26 @@ const questionBank = [
     },
   ];
 
-let questionNumber = 0; // Variable for tracking the array index in the questionBank
+let questionNumber;
 let questionElement = document.getElementById("definition"); 
 let answerElement = document.getElementById("btn-grid");
 let oldScore = parseInt(document.getElementById("correct-score").innerText);
 let nextButton = document.getElementById("next-btn"); 
-const shuffledQuestions = questionBank.sort(() => Math.random() - .5); // Shuffles the questionBank array
+let playAgainButton = document.getElementById("play-again-btn");
+const shuffledQuestions = questionBank.sort(() => Math.random() - .5); 
 
-// Function to start quiz and show question
+
+/*
+* Function to start quiz or play again
+*/
+function startGame() {
+  questionNumber = 0;
+  resetScore()
+  document.getElementById("score-area").style.display = "block"
+  showQuestion()
+}
+
+// Function to show question
 function showQuestion() {
   resetState();
 
@@ -265,6 +277,8 @@ function selectAnswer(e) {
 // Function to remove answer buttons from previous question
 function resetState() {
   nextButton.style.display = "none";
+  playAgainButton.style.display = "none";
+  document.getElementById("score-comment").style.display = "none";
 
   while (answerElement.firstChild) {
     answerElement.removeChild(answerElement.firstChild);
@@ -275,7 +289,6 @@ function resetState() {
 function nextQuestion () {
   if (questionNumber < 10) {
   showQuestion();
-  console.log("less than 10");
 } else {
   showScore();
 }}
@@ -284,23 +297,34 @@ function nextQuestion () {
 function showScore () {
   resetState();
   questionElement.innerHTML = `You scored ${oldScore}/10!`;
+  document.getElementById("score-area").style.display = "none"
+  document.getElementById("score-comment").style.display = "block";
 
   if (oldScore === 10) {
-    document.getElementById("score-area").innerHTML = "Congratulations! You are a True Word Genius!";
+    document.getElementById("score-comment").innerHTML = "Congratulations! You are a True Word Genius!";
   } else if (oldScore >= 7 && oldScore <= 9) {
-    document.getElementById("score-area").innerHTML = "Wow! You are almost an expert vocabularian. Keep playing!";
+    document.getElementById("score-comment").innerHTML = "Wow! You are almost an expert vocabularian. Keep playing!";
   } else if (oldScore >= 1 && oldScore <= 6) {
-    document.getElementById("score-area").innerHTML = "Great effort! Keep playing!";
+    document.getElementById("score-comment").innerHTML = "Great effort! Keep playing!";
   } else {
-    document.getElementById("score-area").innerHTML = "You can only get better. Keep playing!";
+    document.getElementById("score-comment").innerHTML = "You can only get better. Keep playing!";
   }
 
-  nextButton.style.display = "block";
-  nextButton.innerHTML = "Play Again!";
+  playAgainButton.style.display = "block";
+}
+
+// Function to reset scores back to 0 for play again
+function resetScore () {
+  let correctScore = document.getElementById("correct-score");
+  correctScore = 0;
+
+  let incorrectScore = document.getElementById("incorrect-score");
+  incorrectScore = 0;
 }
 
 // Functions to increment scores
 function incrementCorrect() {
+  let oldScore = parseInt(document.getElementById("correct-score").innerText);
   document.getElementById("correct-score").innerText = ++oldScore;
 }
 
@@ -310,8 +334,9 @@ function incrementIncorrect() {
 }
 
 // Event Listeners
-if (document.getElementById("next-btn")) { // If next button exists when page is loaded run startGame function
-  showQuestion()
+if (document.getElementById("next-btn")) { // If next button exists when page is loaded run showQuestion function
+  startGame();
   document.getElementById("next-btn").addEventListener("click", nextQuestion); // run showQuestion function when Next button is clicked
+  document.getElementById("play-again-btn").addEventListener("click", startGame);
 }
 
