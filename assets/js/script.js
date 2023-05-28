@@ -222,7 +222,7 @@ const shuffledQuestions = questionBank.sort(() => Math.random() - .5);
 */
 function startGame() {
   questionNumber = 0;
-  resetScore()
+  oldScore = 0;
   document.getElementById("score-area").style.display = "block"
   showQuestion()
 }
@@ -315,16 +315,18 @@ function showScore () {
 
 // Function to reset scores back to 0 for play again
 function resetScore () {
+  
   let correctScore = document.getElementById("correct-score");
-  correctScore = 0;
+  correctScore.innerText = 0;
 
   let incorrectScore = document.getElementById("incorrect-score");
-  incorrectScore = 0;
+  incorrectScore.innerText = 0;
+  console.log("scores have been reset");
 }
 
 // Functions to increment scores
 function incrementCorrect() {
-  let oldScore = parseInt(document.getElementById("correct-score").innerText);
+  // let oldScore = parseInt(document.getElementById("correct-score").innerText);
   document.getElementById("correct-score").innerText = ++oldScore;
 }
 
@@ -337,6 +339,7 @@ function incrementIncorrect() {
 if (document.getElementById("next-btn")) { // If next button exists when page is loaded run showQuestion function
   startGame();
   document.getElementById("next-btn").addEventListener("click", nextQuestion); // run showQuestion function when Next button is clicked
+  document.getElementById("play-again-btn").addEventListener("click", resetScore);
   document.getElementById("play-again-btn").addEventListener("click", startGame);
 }
 
