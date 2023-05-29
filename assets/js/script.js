@@ -325,7 +325,6 @@ function resetScore () {
 
 // Functions to increment scores
 function incrementCorrect() {
-  // let oldScore = parseInt(document.getElementById("correct-score").innerText);
   document.getElementById("correct-score").innerText = ++oldScore;
 }
 

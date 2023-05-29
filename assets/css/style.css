@@ -113,6 +113,10 @@ button:disabled {
     margin-left: 10px;
 }
 
+#score-comment {
+    font-size: 22px;
+}
+
 /* media queries */
 
 @media screen and (min-width: 376px) and (max-width: 600px) {
