@@ -217,9 +217,7 @@ let playAgainButton = document.getElementById("play-again-btn");
 const shuffledQuestions = questionBank.sort(() => Math.random() - .5); 
 
 
-/*
-* Function to start quiz or play again
-*/
+// Function to start quiz or play again
 function startGame() {
   questionNumber = 0;
   oldScore = 0;
@@ -231,32 +229,32 @@ function startGame() {
 function showQuestion() {
   resetState();
 
-  let currentQuestion = shuffledQuestions[questionNumber]; // The current question to get from the shuffled questions array
-  questionNumber = questionNumber + 1; // Increase questionNumber so that the user sees the number of the question starting at 1
+  let currentQuestion = shuffledQuestions[questionNumber]; 
+  questionNumber = questionNumber + 1; // Questions start at number 1 for user
 
-  questionElement.innerHTML = questionNumber + ". " + currentQuestion.definition; // Set the question number and definition
+  questionElement.innerHTML = questionNumber + ". " + currentQuestion.definition;
 
   currentQuestion.answers.forEach(answer => {
     const button = document.createElement("button"); 
     button.innerHTML = answer.text; 
     button.classList.add("btn");
-    button.classList.add("answer-btn") // for styling separately to the next-button
+    button.classList.add("answer-btn") // For styling that should not be applied to other tyes of button
     answerElement.appendChild(button);
 
-    if (answer.correct) { // If the answer is correct add a data attribute for correct onto the button element, so that we can later check if its correct
-      button.dataset.correct = answer.correct;
+    if (answer.correct) { 
+      button.dataset.correct = answer.correct; // Add a data attribute of correct to the correct button
     }
-    button.addEventListener("click", selectAnswer); // Run selectAnswer function when any button is clicked
+    button.addEventListener("click", selectAnswer);
   });
 }
 
-// Function to check answer, display feedback, and show 'Next' button
+// Function to check answer, display feedback, and show Next button
 function selectAnswer(e) { 
 
-  const selectedButton = e.target; // Defines selectButton as the clicked on target
-  const isCorrect = selectedButton.dataset.correct === "true"; // Checks whether the selected Button has correct in the dataset 
+  const selectedButton = e.target;
+  const isCorrect = selectedButton.dataset.correct === "true";
 
-  if (isCorrect) {
+  if (isCorrect) { // Selected button will turn green or red according to class styling
     selectedButton.classList.add("correct");
     incrementCorrect(); 
   } else {
@@ -264,7 +262,7 @@ function selectAnswer(e) {
     incrementIncorrect();
   }
 
-  Array.from(answerElement.children).forEach(button => { // Create an array for the answer buttons so we can loop
+  Array.from(answerElement.children).forEach(button => { // Create an array for the answer buttons so we can loop through them
     if (button.dataset.correct === "true") { 
       button.classList.add("correct"); // Add a class of correct to the correct answer so that it turns green when the incorrect answer is selected
     }
@@ -274,7 +272,7 @@ function selectAnswer(e) {
   nextButton.style.display = "block";
 }
 
-// Function to remove answer buttons from previous question
+// Function to remove answer buttons, next button, play again button and score-comment
 function resetState() {
   nextButton.style.display = "none";
   playAgainButton.style.display = "none";
@@ -285,7 +283,7 @@ function resetState() {
   }
 }
 
-// Function to limit the quiz to 10 questions and then show results
+// Function to limit the quiz to 10 questions and then show score
 function nextQuestion () {
   if (questionNumber < 10) {
   showQuestion();
@@ -293,7 +291,7 @@ function nextQuestion () {
   showScore();
 }}
 
-// Function to show score and Play Again button
+// Function to show score, score-comment and play again button
 function showScore () {
   resetState();
   questionElement.innerHTML = `You scored ${oldScore}/10!`;
@@ -303,7 +301,7 @@ function showScore () {
   if (oldScore === 10) {
     document.getElementById("score-comment").innerHTML = "Congratulations! You are a True Word Genius!";
   } else if (oldScore >= 7 && oldScore <= 9) {
-    document.getElementById("score-comment").innerHTML = "Wow! You are almost an expert vocabularian. Keep playing!";
+    document.getElementById("score-comment").innerHTML = "Wow! You are an expert vocabularian. Keep playing!";
   } else if (oldScore >= 1 && oldScore <= 6) {
     document.getElementById("score-comment").innerHTML = "Great effort! Keep playing!";
   } else {
@@ -324,7 +322,7 @@ function resetScore () {
 }
 
 // Functions to increment scores
-function incrementCorrect() {
+function incrementCorrect() { 
   document.getElementById("correct-score").innerText = ++oldScore;
 }
 
@@ -334,10 +332,13 @@ function incrementIncorrect() {
 }
 
 // Event Listeners
-if (document.getElementById("next-btn")) { // If next button exists when page is loaded run showQuestion function
+if (document.getElementById("next-btn")) { // If next button exists when page is loaded run showGame function
   startGame();
-  document.getElementById("next-btn").addEventListener("click", nextQuestion); // run showQuestion function when Next button is clicked
-  document.getElementById("play-again-btn").addEventListener("click", resetScore);
-  document.getElementById("play-again-btn").addEventListener("click", startGame);
+
+document.getElementById("next-btn").addEventListener("click", nextQuestion);
+document.getElementById("play-again-btn").addEventListener("click", resetScore);
+document.getElementById("play-again-btn").addEventListener("click", startGame);
 }
+
+
 

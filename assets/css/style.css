@@ -119,7 +119,15 @@ button:disabled {
     font-size: 22px;
 }
 
+#next-btn {
+    display: none;
+}
+
 #play-again-btn {
+    display: none;
+}
+
+.play-again-btn {
     color: black;
 }
 
