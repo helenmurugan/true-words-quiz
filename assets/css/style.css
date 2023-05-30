@@ -75,17 +75,17 @@ a {
     width: 265px;
 }
 
+button:disabled {
+    color: black;
+    pointer-events: none;
+}
+
 .correct {
     background-color: rgba(0, 128, 0, 0.5);;
 }
 
 .incorrect {
     background-color: rgba(255, 0, 0, 0.5);;
-}
-
-button:disabled {
-    color: black;
-    pointer-events: none;
 }
 
 #score-area {
@@ -115,6 +115,10 @@ button:disabled {
 
 #score-comment {
     font-size: 22px;
+}
+
+#play-again-btn {
+    color: black;
 }
 
 /* media queries */
@@ -167,7 +171,7 @@ button:disabled {
     #definition {
         font-size: 18px;
         margin: 0;
-        height: 75px;
+        height: 70px;
     }
 
     .btn {
