@@ -81,11 +81,13 @@ button:disabled {
 }
 
 .correct {
-    background-color: rgba(0, 128, 0, 0.5);;
+    color:black !important;
+    background-color: rgba(0, 128, 0, 0.5) !important;
 }
 
 .incorrect {
-    background-color: rgba(255, 0, 0, 0.5);;
+    color:black !important;
+    background-color: rgba(255, 0, 0, 0.5) !important;
 }
 
 #score-area {
