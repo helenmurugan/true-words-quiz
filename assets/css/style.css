@@ -119,6 +119,7 @@ button:disabled {
 
 #score-comment {
     font-size: 22px;
+    padding: 5px;
 }
 
 #next-btn {

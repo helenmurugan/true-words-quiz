@@ -225,14 +225,13 @@ function startGame() {
   shuffleQuestionBank() 
 }
 
-// Function to shuffle questionBank array
+// Function to shuffle questionBank array at the start of each game
 function shuffleQuestionBank () {
   let shuffledQuestions = questionBank.sort(() => Math.random() - .5);
-  console.log("questions shuffled once");
   showQuestion ();
 }
 
-// Function to show question
+// Function to show question and answers
 function showQuestion() {
   resetState();
 
