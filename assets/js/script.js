@@ -221,8 +221,8 @@ let shuffledQuestions = questionBank.sort(() => Math.random() - .5);
 function startGame() {
   questionNumber = 0;
   oldScore = 0;
-  document.getElementById("score-area").style.display = "block"
-  shuffleQuestionBank() 
+  document.getElementById("score-area").style.display = "block";
+  shuffleQuestionBank();
 }
 
 // Function to shuffle questionBank array at the start of each game
@@ -244,7 +244,7 @@ function showQuestion() {
     const button = document.createElement("button"); 
     button.innerHTML = answer.text; 
     button.classList.add("btn");
-    button.classList.add("answer-btn") // For styling that should not be applied to other types of button
+    button.classList.add("answer-btn"); // For styling that should not be applied to other types of button
     answerElement.appendChild(button);
 
     if (answer.correct) { 
@@ -301,7 +301,7 @@ function nextQuestion () {
 function showScore () {
   resetState();
   questionElement.innerHTML = `You scored ${oldScore}/10!`;
-  document.getElementById("score-area").style.display = "none"
+  document.getElementById("score-area").style.display = "none";
   document.getElementById("score-comment").style.display = "block";
 
   if (oldScore === 10) {
