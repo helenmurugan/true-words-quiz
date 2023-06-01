@@ -16,15 +16,29 @@ True Words Quiz is a fully responsive JavaScript vocabulary quiz, aimed at peopl
 ## Wireframes
 
 ## Features
-* Home Page
-* Favicon
-* Quiz Container
+* Home Page  
+![Image of home page](/documentation/home-page.jpg)
+
+* Favicon  
+![Image of favicon](/documentation/favicon.jpg)
+
+* Quiz Container  
+![Image of quiz area contained within a box](/documentation/quiz-container.jpg)
+
 (numbered questions and button grid containing neatly inside  the box)
-* Buttons with colour-coded feedback
-* Score Area
-* Score Page
-* Play Again 
-* Features left to Implement
+
+* Buttons with colour-coded feedback  
+![Image showing green and red coloured buttons for correct and incorrect feedback](/documentation/background-colour-feedback.jpg)
+
+* Score Area  
+![Image of score area](/documentation/score-area.jpg)
+
+* Score Page  
+![Image of score page](/documentation/score-page.jpg)
+
+* Play Again  
+
+* Features left to Implement  
 (more questions in question bank, image on score page to improve aesthetics) 
 
 ## Technologies Used
