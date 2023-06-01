@@ -214,7 +214,7 @@ let answerElement = document.getElementById("btn-grid");
 let oldScore = parseInt(document.getElementById("correct-score").innerText);
 let nextButton = document.getElementById("next-btn"); 
 let playAgainButton = document.getElementById("play-again-btn");
-const shuffledQuestions = questionBank.sort(() => Math.random() - .5); 
+let shuffledQuestions = questionBank.sort(() => Math.random() - .5);
 
 
 // Function to start quiz or play again
@@ -222,7 +222,14 @@ function startGame() {
   questionNumber = 0;
   oldScore = 0;
   document.getElementById("score-area").style.display = "block"
-  showQuestion()
+  shuffleQuestionBank() 
+}
+
+// Function to shuffle questionBank array
+function shuffleQuestionBank () {
+  let shuffledQuestions = questionBank.sort(() => Math.random() - .5);
+  console.log("questions shuffled once");
+  showQuestion ();
 }
 
 // Function to show question
@@ -238,7 +245,7 @@ function showQuestion() {
     const button = document.createElement("button"); 
     button.innerHTML = answer.text; 
     button.classList.add("btn");
-    button.classList.add("answer-btn") // For styling that should not be applied to other tyes of button
+    button.classList.add("answer-btn") // For styling that should not be applied to other types of button
     answerElement.appendChild(button);
 
     if (answer.correct) { 
