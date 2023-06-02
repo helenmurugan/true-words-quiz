@@ -5,29 +5,51 @@ By Helen Murugan
 [View the live site here](https://helenmurugan.github.io/true-words-quiz/index.html)
 
 
-This document describes the development process for True Words Quiz. It is for educational purposes only, as my second portfolio project for a Diploma in Full Stack Software Development (E-Commerce Applications) with Code Institute, using frontend user-centric development with HTML, CSS and JavaScript.
+This document describes the development process for True Words Quiz. IThis site is for educational purposes only, as my second portfolio project for a Diploma in Full Stack Software Development (E-Commerce Applications) with Code Institute, using frontend user-centric development with HTML, CSS and JavaScript.
 
 ![Screen generator image showing True Words Quiz on different sized devices](/documentation/screen-generator.jpg)
 
-True Words Quiz is a fully responsive JavaScript vocabulary quiz, aimed at people who love to test their vocabulary knowledge. The user has to match a definition to a word, from a choice of four words. Only one of the four word options is a true word and the others are made-up, silly or funny sounding words. True Words Quiz intends to be an entertaining and interesting way to spend five minutes of free time.
+True Words Quiz is a fully responsive JavaScript vocabulary quiz, aimed at people who love vocabulary and want to test their knowledge. The user has to match a definition to a word, from a choice of four words. Only one of the four word options is a true word and the others are made-up, silly or funny sounding words. True Words Quiz intends to be an entertaining and interesting way to spend five minutes of your free time.
 
 ## Design
 
+* Imagery  
+    * A black and white image of dictionary text was chosen as the background image for the quiz. This image is relevant to the subject matter of the quiz and is easily recognisable, helping the user understand what the quiz is about. 
+
+* Typography
+
+    * Indie Flower was downloaded from Google Fonts and used for the home page, definitions, scores and score page. This font is legible and bold, whilst also being fun with its rounded-edges, suitable for content that is not serious. Sans-serif and arial are used as fallback fonts.
+    * Helvetica was used as the font for all the buttons in the quiz. Using a different font for the buttons makes them stand out and draws the user to them. Helvetica is an easily legible, plain font. 
+
+* Colour Scheme
+    * Minimal colour is used throughout the site inkeeping with the dictionary theme. 
+    * Black, whitesmoke and silver are the main colours used. 
+    * Green and red are used to provide feedback on the answer buttons and for the scores.
+
 ## Wireframes
+During the planning stage, I used Excalidraw to create wireframes for each page, and plan the structure of the site.
+
+![Image of wireframe for home page](/documentation/planning-1.jpg)  
+![Image of wireframe for quiz page](/documentation/planning-2.jpg)  
+![Image of wireframe for score page](/documentation/planning-3.jpg)  
 
 ## Features
 * Home Page  
+    * The home page welcomes the user to the quiz, and gives a short and punchy description of how to play. The user is encouraged to move to the next page with the "Lets Play!" button. The text and button are neatly contained within a white box which is consistent throughout the quiz and score page.
+
 ![Image of home page](/documentation/home-page.jpg)
 
-* Favicon  
-![Image of favicon](/documentation/favicon.jpg)
+* The Quiz Area
+    * The quiz consists of a numbered definition (the question), with a button grid showing a choice of four words (the answers). 
+    * The questions are shuffled using JavaScript at the start of each game so that each play will be different.
+    * The user will be asked ten questions to complete the quiz.
+    * The buttons are uniform across the whole quiz to ensure a consistent look throughout. 
+    * When the user hovers over a button, the button will change from black-on-silver to silver-on-black.
 
-* Quiz Container  
 ![Image of quiz area contained within a box](/documentation/quiz-container.jpg)
 
-(numbered questions and button grid containing neatly inside  the box)
-
-* Buttons with colour-coded feedback  
+* Buttons with colour-coded feedback
+    * When the user clicks on a button, the background colour of the button will turn green if they selected the correct answer
 ![Image showing green and red coloured buttons for correct and incorrect feedback](/documentation/background-colour-feedback.jpg)
 
 * Score Area  
@@ -37,6 +59,11 @@ True Words Quiz is a fully responsive JavaScript vocabulary quiz, aimed at peopl
 ![Image of score page](/documentation/score-page.jpg)
 
 * Play Again  
+
+questions shuffled before next game
+
+* Favicon  
+![Image of favicon](/documentation/favicon.jpg
 
 * Features left to Implement  
 (more questions in question bank, image on score page to improve aesthetics) 
