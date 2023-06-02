@@ -84,8 +84,16 @@ The site has been thoroughly tested and works well on devices of all sizes.
 
 ### Validator Testing
 * HTML
+    * No errors were returned when validating the code with the official W3C validator.
 * CSS
+    * No errors were returned when validating the code with the official (Jigsaw) validator.
 * JavaScript
+    * No errors were found when passing through the official JSHint validator
+        * The following metrics were returned.
+        * There are 14 functions in this file.
+        * Function with the largest signature take 1 arguments, while the median is 0.
+        * Largest function has 10 statements in it, while the median is 3.5.
+        * The most complex function has a cyclomatic complexity value of 6 while the median is 1.
 * Accessibility
     * I confirmed that the fonts and colours are easy to read.
     * I used Lighthouse in DevTools to confirm that every page scores well for accessibility.
@@ -119,7 +127,6 @@ I discovered several interesting bugs after deployment, mostly relating to mobil
     * In Branch select "main".
     * Select Save.
     * After several minutes the live site was deployed [here](https://helenmurugan.github.io/true-words-quiz/index.html)
-
 
 ## Credits
 * Code
