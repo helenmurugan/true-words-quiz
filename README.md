@@ -35,40 +35,49 @@ During the planning stage, I used Excalidraw to create wireframes for each page,
 
 ## Features
 * Home Page  
-    * The home page welcomes the user to the quiz, and gives a short and punchy description of how to play. The user is encouraged to move to the next page with the "Lets Play!" button. The text and button are neatly contained within a white box which is consistent throughout the quiz and score page.
+    * The home page welcomes the user to the quiz, and gives a short and punchy description of how to play. The user is encouraged to move to the quiz page with the "Lets Play!" button. The text and buttons are neatly contained within a white box which is consistent throughout the quiz and score page.
 
 ![Image of home page](/documentation/home-page.jpg)
 
 * The Quiz Area
+    * The following features are implemented using JavaScript.
     * The quiz consists of a numbered definition (the question), with a button grid showing a choice of four words (the answers). 
-    * The questions are shuffled using JavaScript at the start of each game so that each play will be different.
-    * The user will be asked ten questions to complete the quiz.
-    * The buttons are uniform across the whole quiz to ensure a consistent look throughout. 
-    * When the user hovers over a button, the button will change from black-on-silver to silver-on-black.
-
+    * The questions are shuffled at the start of each game so that each play is different.
+    * The user will be asked ten questions to complete the quiz, and moving onto the results.
+   
 ![Image of quiz area contained within a box](/documentation/quiz-container.jpg)
 
-* Buttons with colour-coded feedback
-    * When the user clicks on a button, the background colour of the button will turn green if they selected the correct answer
+* Button Feedback
+    * When the user hovers over a button, the button will change from black-on-silver to silver-on-black, implemented using CSS.
+    * When the user clicks on a button, the background colour of the button will turn green if they selected the correct answer.
+    * When the wrong answer is selected, the button will turn red and the correct answer button will turn green.
+    * This colour-coded feedback is implemented using JavaScript to add a class to the correct and incorrect buttons, and CSS to style said classes. It allows the user to see instantly which answers are correct.
+    * After an answer button is selected, a "Next" button appears at the bottom of the quiz container, prompting the user to move to the next question. The presence/absence of the button is controlled using JavaScript.
+    
 ![Image showing green and red coloured buttons for correct and incorrect feedback](/documentation/background-colour-feedback.jpg)
 
 * Score Area  
+    * The score area keeps a tally of the correct and incorrect answer scores. 
+    * They are colour coded in green and red which is intuitively easier to read than the actual text.
+    * The scores are incremented immediately when the answer-button is selected, giving instant fedback to the user. This was achieved using JavaScript for the score and CSS for the colour.
+
 ![Image of score area](/documentation/score-area.jpg)
 
-* Score Page  
+* Score Page 
+    * The score out of 10 is displayed at the top of the page, this has been implemented on the quiz.html page using JavaScript.
+    * A comment gives a short encouraging message to the user based on their score. There are four possible messages based on four score conditions.
+    * A "Play Again" button encourages the user to continue playing. The questions are shuffled at the start of every game.
+
 ![Image of score page](/documentation/score-page.jpg)
 
-* Play Again  
+* Favicon 
+    * The favicon displays a logo and makes it easier for the user to pick out True Words Quiz from the tabs.
 
-questions shuffled before next game
+![Image of favicon](/documentation/favicon.jpg)
 
-* Favicon  
-![Image of favicon](/documentation/favicon.jpg
-
-* Features left to Implement  
-(more questions in question bank, image on score page to improve aesthetics) 
-
-## Technologies Used
+* Features left to Implement
+    * To improve the quiz, more questions should be added to the questionBank array in script.js. More questions will reduce the chance of users seeing the same question twice.
+    * To improve the appearance of the score page, an image or icon based on their score could be added using JavaScript.
 
 ## Testing
 The site has been thoroughly tested and works well on devices of all sizes.
@@ -78,6 +87,10 @@ The site has been thoroughly tested and works well on devices of all sizes.
 * CSS
 * JavaScript
 * Accessibility
+    * I confirmed that the fonts and colours are easy to read.
+    * I used Lighthouse in DevTools to confirm that every page scores well for accessibility.
+
+![Image showing Lighthouse analysis of quiz page](/documentation/lighthouse.jpg)
 
 ### Fixed Bugs
 I discovered several interesting bugs after deployment, mostly relating to mobile devices. These were all investigated and fortunately i was able to fix the bugs as detailed below.
