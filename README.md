@@ -79,7 +79,7 @@ During the planning stage, I used Excalidraw to create wireframes for each page,
 ![Image of favicon](/documentation/favicon.jpg)
 
 * Possible Features Left to Implement
-    * To improve the quiz, more questions should be added to the questionBank array in script.js. Currently there are 23 questions, however, more questions will reduce the chance of users seeing the same question twice. If more questions are added, the questions could be located in a separate JavaScript file.
+    * To improve the quiz, more questions should be added to the questionBank array in script.js. Currently there are 40 questions, however, more questions will reduce the chance of users seeing the same question twice. If more questions are added, the questions could be located in a separate JavaScript file to keep them neatly separated.
     * JavaScript could be used to shuffle the answer buttons so that the correct answer appears in a random position as one of the four options. This would save time when inputting more questions into the questionBank because the correct answer could be written first every time.
     * Different levels of difficulty could be added as a feature - typically Easy, Medium and Difficult.
     * To improve the appearance of the score page, an image or icon based on the user's score could be added using JavaScript.

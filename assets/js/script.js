@@ -206,6 +206,141 @@ const questionBank = [
       {text: "Zipperdibbet", correct: false}
       ],
     },
+    {
+      definition: "A clumsy or unskilled person",
+      answers: [
+      {text: "Jibberfool", correct: false},
+      {text: "Quibbernib", correct: false},
+      {text: "Blunderbuss", correct: true},
+      {text: "Doodlefrum", correct: false}
+      ],
+    },
+    {
+      definition: "Something extraordinary, remarkable or outstanding",
+      answers: [
+      {text: "Whimsiwhirl", correct: false},
+      {text: "Quipperoozy", correct: false},
+      {text: "Doozy", correct: true},
+      {text: "Fruppy", correct: false}
+      ],
+    },
+    {
+      definition: "Very quickly at a fast pace",
+      answers: [
+      {text: "Whiz-bo", correct: false},
+      {text: "Split-sharp", correct: false},
+      {text: "Lickety-split", correct: true},
+      {text: "Spoodledoo", correct: false}
+      ],
+    },
+    {
+      definition: "The pleasant earthy smell that follows rain after a dry spell",
+      answers: [
+      {text: "Drizzlop", correct: false},
+      {text: "Pittermizzle", correct: false},
+      {text: "Petrichor", correct: true},
+      {text: "Splishsprinkle", correct: false}
+      ],
+    },
+    {
+      definition: "Used to describe a person that has well-shaped buttocks",
+      answers: [
+      {text: "Callipygian", correct: true},
+      {text: "Curvigor", correct: false},
+      {text: "Voluplush", correct: false},
+      {text: "Bodaciousity", correct: false}
+      ],
+    },
+    {
+      definition: "The act of throwing someone or something out of a window",
+      answers: [
+      {text: "Defenestration", correct: true},
+      {text: "Flinerang", correct: false},
+      {text: "Tosserlaunche", correct: false},
+      {text: "Lobstacule", correct: false}
+      ],
+    },
+    {
+      definition: "Having a fluffy or woolly appearance",
+      answers: [
+      {text: "Flocculent", correct: true},
+      {text: "Yarfstang", correct: false},
+      {text: "Poodlish", correct: false},
+      {text: "Verywooly", correct: false}
+      ],
+    },
+    {
+      definition: "Moving in the opposite direction to the natural or customary way",
+      answers: [
+      {text: "Widdershins", correct: true},
+      {text: "Swirlstride", correct: false},
+      {text: "Glideleap", correct: false},
+      {text: "Swoopwhirl", correct: false}
+      ],
+    },
+    {
+      definition: "The sound of wind rustling through trees or leaves",
+      answers: [
+      {text: "Whispershuffle", correct: false},
+      {text: "Psithurism", correct: true},
+      {text: "Sightruffle", correct: false},
+      {text: "Blushlutter", correct: false}
+      ],
+    },
+    {
+      definition: "A word used to refer to the day before yesterday",
+      answers: [
+      {text: "Whixadixical", correct: false},
+      {text: "Nudiustertian", correct: true},
+      {text: "Gistiadian", correct: false},
+      {text: "Loopsadilly", correct: false}
+      ],
+    },
+    {
+      definition: "A gentle mild breeze",
+      answers: [
+      {text: "Sawaskawa", correct: false},
+      {text: "Nupkiss", correct: false},
+      {text: "Fratters", correct: false},
+      {text: "Zephyr", correct: true}
+      ],
+    },
+    {
+      definition: "The enjoyment or love of the smell of books",
+      answers: [
+      {text: "Miameasury", correct: false},
+      {text: "Bibliospire", correct: false},
+      {text: "Joofwhirl", correct: false},
+      {text: "Bibliosmia", correct: true}
+      ],
+    },
+    {
+      definition: "A person who never laughs or finds things funny",
+      answers: [
+      {text: "Griddlefins", correct: false},
+      {text: "Doxymuff", correct: false},
+      {text: "Boralicious", correct: false},
+      {text: "Agelast", correct: true}
+      ],
+    },
+    {
+      definition: "The act of spitting while speaking",
+      answers: [
+      {text: "Grinfeg", correct: false},
+      {text: "Porsplish", correct: false},
+      {text: "Spittysplash", correct: false},
+      {text: "Sialoquent", correct: true}
+      ],
+    },
+    {
+      definition: "A person who uses long words.",
+      answers: [
+      {text: "Mewittallion", correct: false},
+      {text: "Logohoit", correct: false},
+      {text: "Showyshoff", correct: false},
+      {text: "Sesquipedalian", correct: true}
+      ],
+    },
   ];
 
 let questionNumber;
