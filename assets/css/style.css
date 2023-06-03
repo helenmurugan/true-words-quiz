@@ -132,12 +132,11 @@ button:disabled {
 }
 
 /* media queries */
-
 @media screen and (min-width: 376px) and (max-width: 600px) {
     #box {
         width: 334px;
     }
-    
+
     .quiz-box-size {
         height: 380px;
         width: 334px;
@@ -161,6 +160,7 @@ button:disabled {
 @media screen and (max-width: 375px) {
     #box {
         margin: 0;
+        height: 355px;
         width: 286px;
     }
 

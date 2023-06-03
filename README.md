@@ -79,7 +79,7 @@ During the planning stage, I used Excalidraw to create wireframes for each page,
 ![Image of favicon](/documentation/favicon.jpg)
 
 * Possible Features Left to Implement
-    * To improve the quiz, more questions should be added to the questionBank array in script.js. Currently there are 23 questions, however, more questions will reduce the chance of users seeing the same question twice. If more questions are added the questions could be located in a separate JavaScript file.
+    * To improve the quiz, more questions should be added to the questionBank array in script.js. Currently there are 23 questions, however, more questions will reduce the chance of users seeing the same question twice. If more questions are added, the questions could be located in a separate JavaScript file.
     * JavaScript could be used to shuffle the answer buttons so that the correct answer appears in a random position as one of the four options. This would save time when inputting more questions into the questionBank because the correct answer could be written first every time.
     * Different levels of difficulty could be added as a feature - typically Easy, Medium and Difficult.
     * To improve the appearance of the score page, an image or icon based on the user's score could be added using JavaScript.
@@ -110,16 +110,14 @@ I discovered several interesting bugs after deployment. These were all investiga
 
 * The button-grid jumped up very slightly when the Next button appeared. This bug was not visible in DevTools and strangely seemed to appear only on iphones. The bug was corrected by reducing the height in pixels of the question (or definition) element to allow a little more space for the Next button.
 * On mobile devices the background colour feedback on the answer buttons did not work correctly. The selected button would appear black (the hover colour), instead of green or red for correct and incorrect respectively. Due to the way mobile devices interact with the web page, the hover style rule was applied, in reality hover isn't possible on a touch-screen. This issue was corrected by adding !important to the background-color and font color style rules for the correct and incorrect classes, so that they take precedence over the hover style rules.
-* When the quiz page was loaded the Next and Play Again buttons flashed up very quickly when they should be hidden. It happened so quickly you weren't sure if you had really seen it, and seemed to only happen the first time the page was loaded on a new device. The buttons were present in my html file and JavaScript was used to hide the buttons. As the computer was reading the html code first it would show and then hide the buttons. To correct this bug, I simply added a style rule for display: none so that the buttons should not be displayed in the first instance.
+* When the quiz page was loaded the Next and Play Again buttons flashed up very quickly, when they should be hidden. It happened so quickly you weren't sure if you had really seen it, and seemed to only happen the first time the page was loaded on a new device. The buttons were present in my html file, and JavaScript was used to hide the buttons. As the computer was reading the html code first, it would show and then hide the buttons. To correct this bug, I simply added a style rule for display: none so that the buttons should not be displayed in the first instance.
 
 ## Unfixed bugs
 * There are no unfixed bugs.
 
 ### Further Testing
 * The site has been tested and works well in different browsers: Chrome, Microsoft Edge, Internet Explorer and Safari.
-* JS testing
-* Media queries were added to the following features and tested to ensure the site is fully responsive.
-    * ...
+* Media queries were added and tested to ensure the site is fully responsive. The media queries relate only to the sizing of the elements and fonts.
 * DevTools device toolbar was used to ensure the site is fully responsive and looks good across different screen sizes.
 * After deployment, the site was tested on a range of different devices - mobile devices (both iphone and Android), tablet, laptop and desktop.
 
@@ -135,13 +133,16 @@ I discovered several interesting bugs after deployment. These were all investiga
 
 ## Credits
 * Code
-    * Score area code
-    *
-    * Mention both you tube videos for sections of code that was copued.
+    * The JavaScript code to create a shuffledQuestions variable, showQuestion function and resetState function was adapted from [Web Dev Simplified - Build A Quiz App With JavaScript](https://www.youtube.com/watch?v=riDzcEQbX6k).
+    * The code for the selectAnswer function was taken from [Easy Tutorials - How To Make Quiz App Using JavaScript](https://www.youtube.com/watch?v=PBcqGxrr9g8).
+    * The JavaScript functions to increment the scores was taken from the Code Institute's Love Maths project.
+    
 * Media
-    * Cover image
+    * The cover image was downloaded from [Pexels](https://www.pexels.com/photo/black-and-white-book-business-close-up-267669/).
+
 * Content
     *  Question and answer content was written by the developer. Definitions were taken from the Merriam-Webster English Dictionary.
+
 * Acknowledgements
     * I would like to thank my mentor Victor Miclovich for his excellent advice and guidance during the development of this project.
     * I would like to thank Tutor Support at Code Institute for their support.
