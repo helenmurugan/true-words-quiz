@@ -5,7 +5,7 @@ By Helen Murugan
 [View the live site here](https://helenmurugan.github.io/true-words-quiz/index.html)
 
 
-This document describes the development process for True Words Quiz. This site is for educational purposes only, as my second portfolio project for a Diploma in Full Stack Software Development (E-Commerce Applications) with Code Institute, using frontend user-centric development with HTML, CSS and JavaScript.
+This document describes the development process for True Words Quiz. This site is for educational purposes only, as my second portfolio project for a Diploma in Full Stack Software Development (E-Commerce Applications) with Code Institute. I used HTML, CSS and JavaScript to build an interactive frontend site, allowing users to actively engage with data in the site.
 
 ![Screen generator image showing True Words Quiz on different sized devices](/documentation/screen-generator.jpg)
 
