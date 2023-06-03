@@ -305,7 +305,7 @@ function showScore () {
   document.getElementById("score-comment").style.display = "block";
 
   if (oldScore === 10) {
-    document.getElementById("score-comment").innerHTML = "Congratulations! You are a True Word Genius!";
+    document.getElementById("score-comment").innerHTML = "Congratulations! You are a True Words Genius!";
   } else if (oldScore >= 7 && oldScore <= 9) {
     document.getElementById("score-comment").innerHTML = "Wow! You are an expert vocabularian. Keep playing!";
   } else if (oldScore >= 1 && oldScore <= 6) {

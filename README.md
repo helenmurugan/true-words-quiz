@@ -5,7 +5,7 @@ By Helen Murugan
 [View the live site here](https://helenmurugan.github.io/true-words-quiz/index.html)
 
 
-This document describes the development process for True Words Quiz. IThis site is for educational purposes only, as my second portfolio project for a Diploma in Full Stack Software Development (E-Commerce Applications) with Code Institute, using frontend user-centric development with HTML, CSS and JavaScript.
+This document describes the development process for True Words Quiz. This site is for educational purposes only, as my second portfolio project for a Diploma in Full Stack Software Development (E-Commerce Applications) with Code Institute, using frontend user-centric development with HTML, CSS and JavaScript.
 
 ![Screen generator image showing True Words Quiz on different sized devices](/documentation/screen-generator.jpg)
 
@@ -14,7 +14,7 @@ True Words Quiz is a fully responsive JavaScript vocabulary quiz, aimed at peopl
 ## Design
 
 * Imagery  
-    * A black and white image of dictionary text was chosen as the background image for the quiz. This image is relevant to the subject matter of the quiz and is easily recognisable, helping the user understand what the quiz is about. 
+    * A black and white image of dictionary text was chosen as the background image for the quiz. This image is relevant to the subject matter and is easily recognisable, helping the user understand what the quiz is about. 
 
 * Typography
 
@@ -35,38 +35,41 @@ During the planning stage, I used Excalidraw to create wireframes for each page,
 
 ## Features
 * Home Page  
-    * The home page welcomes the user to the quiz, and gives a short and punchy description of how to play. The user is encouraged to move to the quiz page with the "Lets Play!" button. The text and buttons are neatly contained within a white box which is consistent throughout the quiz and score page.
+    * The home page welcomes the user to the quiz, and gives a short and punchy description of how to play. 
+    * The user is encouraged to move to the quiz page with the "Lets Play!" button. 
+    * The content is neatly contained within a white box which is consistent throughout the quiz.
 
 ![Image of home page](/documentation/home-page.jpg)
 
 * The Quiz Area
-    * The following features are implemented using JavaScript.
+    * The following features are implemented in script.js.
     * The quiz consists of a numbered definition (the question), with a button grid showing a choice of four words (the answers). 
     * The questions are shuffled at the start of each game so that each play is different.
-    * The user will be asked ten questions to complete the quiz, and moving onto the results.
+    * The user will be asked ten questions to complete the quiz, then shown the final score.
    
 ![Image of quiz area contained within a box](/documentation/quiz-container.jpg)
 
 * Button Feedback
-    * When the user hovers over a button, the button will change from black-on-silver to silver-on-black, implemented using CSS.
+    * When the user hovers over a button with a mouse, the button will change from black-on-silver to silver-on-black, implemented in style.css.
     * When the user clicks on a button, the background colour of the button will turn green if they selected the correct answer.
     * When the wrong answer is selected, the button will turn red and the correct answer button will turn green.
-    * This colour-coded feedback is implemented using JavaScript to add a class to the correct and incorrect buttons, and CSS to style said classes. It allows the user to see instantly which answers are correct.
-    * After an answer button is selected, a "Next" button appears at the bottom of the quiz container, prompting the user to move to the next question. The presence/absence of the button is controlled using JavaScript.
-    
+    * The colour-coded feedback is implemented by adding a class to the button with JavaScript and style using css. It allows the user to see instantly which answers are correct.
+    * After an answer button is selected, a "Next" button will appear at the bottom of the quiz container, prompting the user to move to the next question.
+
 ![Image showing green and red coloured buttons for correct and incorrect feedback](/documentation/background-colour-feedback.jpg)
 
 * Score Area  
     * The score area keeps a tally of the correct and incorrect answer scores. 
-    * They are colour coded in green and red which is intuitively easier to read than the actual text.
+    * They are colour coded in green and red which is intuitively easy to understand.
     * The scores are incremented immediately when the answer-button is selected, giving instant fedback to the user. This was achieved using JavaScript for the score and CSS for the colour.
 
 ![Image of score area](/documentation/score-area.jpg)
 
-* Score Page 
-    * The score out of 10 is displayed at the top of the page, this has been implemented on the quiz.html page using JavaScript.
+* Score Page
+    * After ten questions have been answered, a score page will appear, implemented in script.js.
+    * The score out of 10 is displayed at the top of the page.
     * A comment gives a short encouraging message to the user based on their score. There are four possible messages based on four score conditions.
-    * A "Play Again" button encourages the user to continue playing. The questions are shuffled at the start of every game.
+    * A "Play Again" button encourages the user to continue playing.
 
 ![Image of score page](/documentation/score-page.jpg)
 
@@ -75,12 +78,14 @@ During the planning stage, I used Excalidraw to create wireframes for each page,
 
 ![Image of favicon](/documentation/favicon.jpg)
 
-* Features left to Implement
-    * To improve the quiz, more questions should be added to the questionBank array in script.js. More questions will reduce the chance of users seeing the same question twice.
-    * To improve the appearance of the score page, an image or icon based on their score could be added using JavaScript.
+* Possible Features Left to Implement
+    * To improve the quiz, more questions should be added to the questionBank array in script.js. Currently there are 23 questions, however, more questions will reduce the chance of users seeing the same question twice. If more questions are added the questions could be located in a separate JavaScript file.
+    * JavaScript could be used to shuffle the answer buttons so that the correct answer appears in a random position as one of the four options. This would save time when inputting more questions into the questionBank because the correct answer could be written first every time.
+    * Different levels of difficulty could be added as a feature - typically Easy, Medium and Difficult.
+    * To improve the appearance of the score page, an image or icon based on the user's score could be added using JavaScript.
 
 ## Testing
-The site has been thoroughly tested and works well on devices of all sizes.
+The site has been thoroughly tested and works well on devices of all sizes, both in function and appearance.
 
 ### Validator Testing
 * HTML
@@ -101,11 +106,11 @@ The site has been thoroughly tested and works well on devices of all sizes.
 ![Image showing Lighthouse analysis of quiz page](/documentation/lighthouse.jpg)
 
 ### Fixed Bugs
-I discovered several interesting bugs after deployment, mostly relating to mobile devices. These were all investigated and fortunately i was able to fix the bugs as detailed below.
-* Button-grid jumping up very slightly when Next button appears after a button had been clicked on. This bug was not visible in DevTools and strangely seemed to appear only on iphones. The bug was corrected by reducing the height in pixels of the question (or definition) element to allow a little more space for the Next button.
-* On mobile devices the background colour feedback on the answer buttons did not work correctly. The selected button would appear black (the hover colour), instead of green or red for correct and incorrect respectively. This was only an issue on mobile devices due to the way mobile devices interact with the web page (hover isn't possible on mobile devices in the way it is on a desktop). This issue was corrected by adding !important to the background-color and font color style rules for the correct and incorrect classes, so that they take precedence over the hover style rules.
-* On mobile devices the Play Again button font colour appeared the default font colour for buttons which is blue. At first I changed the color to black using an id but this prevented the hover styling from working correctly (the font colour remained black when hovered over, instead of turning silver). This was fixed by creating a class for the font colour (rather than an id) so that it has the same level of importance as the hover class and now works well on all devices.
-* On the first time that the quiz page was loaded on a new device, the Next and Play Again buttons appeared flashed up very briefly before disappearing. It happened so quickly you weren't sure if you had really seen it!...
+I discovered several interesting bugs after deployment. These were all investigated and fortunately I was able to fix the bugs as detailed below.
+
+* The button-grid jumped up very slightly when the Next button appeared. This bug was not visible in DevTools and strangely seemed to appear only on iphones. The bug was corrected by reducing the height in pixels of the question (or definition) element to allow a little more space for the Next button.
+* On mobile devices the background colour feedback on the answer buttons did not work correctly. The selected button would appear black (the hover colour), instead of green or red for correct and incorrect respectively. Due to the way mobile devices interact with the web page, the hover style rule was applied, in reality hover isn't possible on a touch-screen. This issue was corrected by adding !important to the background-color and font color style rules for the correct and incorrect classes, so that they take precedence over the hover style rules.
+* When the quiz page was loaded the Next and Play Again buttons flashed up very quickly when they should be hidden. It happened so quickly you weren't sure if you had really seen it, and seemed to only happen the first time the page was loaded on a new device. The buttons were present in my html file and JavaScript was used to hide the buttons. As the computer was reading the html code first it would show and then hide the buttons. To correct this bug, I simply added a style rule for display: none so that the buttons should not be displayed in the first instance.
 
 ## Unfixed bugs
 * There are no unfixed bugs.
