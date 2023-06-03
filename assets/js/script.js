@@ -231,7 +231,7 @@ function shuffleQuestionBank () {
   showQuestion ();
 }
 
-// Function to show question and answers
+// Function to show next question and answers
 function showQuestion() {
   resetState();
 
@@ -244,11 +244,11 @@ function showQuestion() {
     const button = document.createElement("button"); 
     button.innerHTML = answer.text; 
     button.classList.add("btn");
-    button.classList.add("answer-btn"); // For styling that should not be applied to other types of button
+    button.classList.add("answer-btn");
     answerElement.appendChild(button);
 
     if (answer.correct) { 
-      button.dataset.correct = answer.correct; // Add a data attribute of correct to the correct button
+      button.dataset.correct = answer.correct;
     }
     button.addEventListener("click", selectAnswer);
   });
@@ -338,7 +338,7 @@ function incrementIncorrect() {
 }
 
 // Event Listeners
-if (document.getElementById("next-btn")) { // If next button exists when page is loaded run showGame function
+if (document.getElementById("next-btn")) {
   startGame();
 
 document.getElementById("next-btn").addEventListener("click", nextQuestion);
