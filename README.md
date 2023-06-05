@@ -29,12 +29,14 @@ This document describes the development process for True Words Quiz. This site i
     * [The Score Page](#the-score-page)
     * [Favicon](#favicon)
     * [Future Implementations](#future-implementations)
+    * [Accessibility](#accessibility)
 * [Testing](#testing)
     * [Validator Testing](#validator-testing)
     * [Accessibility](#accessibility)
     * [Fixed Bugs](#fixed-bugs)
     * [Unfixed Bugs](#unfixed-bugs)
     * [Further Testing](#further-testing)
+* [Technologies Used](#technologies-used)
 * [Deployment](#deployment)
 * [Credits](#credits)
     * [Code](#code)
@@ -132,6 +134,14 @@ During the planning stage, I used Excalidraw to create wireframes for each page 
 * Different levels of difficulty could be added as a feature - typically Easy, Medium and Difficult.
 * To improve the appearance of the score page, an image or icon based on the user's score could be added using JavaScript.
 
+### Accessibility
+During development of True Words Quiz I have been mindful of accessibility by:
+* Using semantic HTML.
+* Ensuring sufficient colour contrast throughout the site.
+* Selecting fonts that are clear and legible.
+* Using hover styling on all buttons so that the user can see clearly when they are hovering over a button.
+* For users with colour blindness who may not be able to see the colour feedback on the answer buttons, the score area will allow them to see whether their answer was correct. A future improvement could be the addition of ticks and crosses to the answer buttons in addition to the coloured backgrounds.
+
 ## Testing
 The site has been thoroughly tested and works well on devices of all sizes, both in function and appearance.
 
@@ -169,6 +179,8 @@ I discovered several interesting bugs after deployment. These were all investiga
 * Media queries were added and tested to ensure the site is fully responsive. The media queries relate only to the sizing of the elements and fonts.
 * DevTools device toolbar was used to ensure the site is fully responsive and looks good across different screen sizes.
 * After deployment, the site was tested on a range of different devices - mobile devices (both iPhone and Android), tablets, laptops and desktops.
+
+## Technologies Used
 
 ## Deployment
 * The site was deployed to GitHub pages by the following steps:
