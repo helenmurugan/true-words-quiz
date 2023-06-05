@@ -9,7 +9,9 @@ This document describes the development process for True Words Quiz. This site i
 
 ![Screen generator image showing True Words Quiz on different sized devices](/documentation/screen-generator.jpg)
 
-True Words Quiz is a fully responsive JavaScript vocabulary quiz, aimed at people who love vocabulary and want to test their knowledge. The user has to match a definition to a word, from a choice of four words. Only one of the word options is a true word and the others are made-up, silly or funny-sounding words. True Words Quiz intends to be an entertaining and interesting way to spend your free time.
+* True Words Quiz is a fully responsive JavaScript vocabulary quiz, aimed at people who love vocabulary and want to test their knowledge. 
+* The user has to match a definition to a word, from a choice of four words. Only one of the word options is a true word and the others are made-up, silly or funny-sounding words. 
+* True Words Quiz intends to be an entertaining and interesting way to spend several minutes of your free time.
 
 # CONTENTS
 * [User Experience](#user-experience)
@@ -52,14 +54,20 @@ True Words Quiz is a fully responsive JavaScript vocabulary quiz, aimed at peopl
     * I want to play again to improve my scores.
 
 ## Design
-
 ### Imagery  
-* A black-and-white image of dictionary text was chosen as the background image for the quiz. This image is relevant to the subject matter and is easily recognisable, helping the user understand what the quiz is about. 
+* A black-and-white image of dictionary text was chosen as the background image for the quiz. This image is relevant to the subject matter and is easily recognisable, helping the user understand what the quiz is about.
+
+![Image of dictionary text used as background](/documentation/cover-image-snippet.jpg) 
 
 ### Typography
 
 * Indie Flower was downloaded from Google Fonts and used for the home page, definitions, scores and score page. This font is legible and bold, whilst also being fun with its rounded-edges, suitable for content that is not serious. Sans-serif and Arial are used as fallback fonts.
+
+![Image of "True Words Quiz" typed with indie-flower font](/documentation/indie-flower-font.jpg) 
+
 * Helvetica was used as the font for all the buttons in the quiz. Using a different font for the buttons makes them stand out and draws the user to them. Helvetica is an easily legible, plain font. 
+
+![Image of "Let's Play!" typed with helvetica font](/documentation/helvetica-font.jpg) 
 
 ### Colour Scheme
 * Minimal colour is used throughout the site in keeping with the dictionary theme. 
