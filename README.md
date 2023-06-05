@@ -159,17 +159,16 @@ The site has been thoroughly tested and works well on devices of all sizes, both
         * The most complex function has a cyclomatic complexity value of 6 while the median is 1.
 
 ### Accessibility
-    * I confirmed that the fonts and colours are easy to read.
-    * I used Lighthouse in DevTools to confirm that every page scores well for accessibility.
+* I used Lighthouse in DevTools to confirm that every page scores well for accessibility.
 
 ![Image showing Lighthouse analysis of quiz page](/documentation/lighthouse.jpg)
 
 ### Fixed Bugs
 I discovered several interesting bugs after deployment. These were all investigated and fortunately, I was able to fix the bugs as detailed below.
 
-* The button grid jumped up very slightly when the Next button appeared. This bug was not visible in DevTools and strangely seemed to appear only on iPhones. The bug was corrected by reducing the height in pixels of the question (or definition) element to allow a little more space for the Next button.
-* On mobile devices, the background colour feedback on the answer buttons did not work correctly. The selected button would appear black (the hover colour), instead of green or red for correct and incorrect respectively. Due to the way mobile devices interact with the web page, the hover style rule was applied, in reality, hover isn't possible on a touchscreen. This issue was corrected by adding !important to the background colour and font colour style rules for the correct and incorrect classes so that they take precedence over the hover style rules.
-* When the quiz page was loaded the Next and Play Again buttons flashed up very quickly, when they should be hidden. It happened so quickly that you weren't sure if you had seen it, and seemed to only happen the first time the page was loaded on a new device. The buttons were present in my html file, and JavaScript was used to hide the buttons. As the computer was reading the html code first, it would show and then hide the buttons. To correct this bug, I simply added a style rule for display: none so that the buttons should not be displayed in the first instance.
+* The button grid jumped up very slightly when the Next button appeared. This bug was not visible in DevTools and strangely seemed to appear only on iPhones. The bug was corrected by reducing the height in pixels of the question (or definition) element to allow a little more space for the Next button to occupy.
+* On mobile devices, the background colour feedback on the answer buttons did not work correctly. The selected button would appear black (the hover colour), instead of green or red for correct and incorrect respectively. Due to the way mobile devices interact with the web page, the hover style rule was applied. In reality, hover isn't possible on a touchscreen because there isnt a cursor. This issue was corrected by adding !important to the background colour and font colour in style.css for the correct and incorrect classes so that they take precedence over the hover style rules.
+* When the quiz page was loaded the Next and Play Again buttons flashed up, when they should have been hidden. It happened so quickly that you weren't sure if you had seen it, and seemed to happen only on the first time the page was loaded on a new device. Originally, the buttons were present in my HTML file, and JavaScript was used to hide the buttons. As the computer was reading the HTML code first, it would show and then hide the buttons. To correct this bug, I simply added a style rule for display: none in style.css so that the buttons should not be displayed in the first instance.
 
 ### Unfixed bugs
 * There are no unfixed bugs.
@@ -181,6 +180,19 @@ I discovered several interesting bugs after deployment. These were all investiga
 * After deployment, the site was tested on a range of different devices - mobile devices (both iPhone and Android), tablets, laptops and desktops.
 
 ## Technologies Used
+### Languages
+* HTML
+* CSS
+* JavaScript
+
+### Frameworks, Libraries and Programs Used
+* [Excalidraw]() - To create wireframes.
+* [Git](https://git-scm.com/) - For version control.
+* [GitHub](https://github.com/) - To save and store the repository for the site.
+* [Gitpod](https://gitpod.io/workspaces) - The IDE used to create the site.
+* [Google Fonts](https://fonts.google.com/) - Used to import a font for the site.
+* [Google Developer Tools](https://developer.chrome.com/docs/) - To ensure responsiveness, check style properties and debug JavaScript code by checking for console errors.
+* [Favicon.io](https://favicon.io/) - To create a favicon.
 
 ## Deployment
 * The site was deployed to GitHub pages by the following steps:
@@ -190,7 +202,7 @@ I discovered several interesting bugs after deployment. These were all investiga
     * In Source select "Deploy from a branch".
     * In Branch select "main".
     * Select Save.
-    * After several minutes the live site was deployed [here](https://helenmurugan.github.io/true-words-quiz/index.html)
+    * After several minutes the live site was deployed at this URL [https://helenmurugan.github.io/true-words-quiz/index.html](https://helenmurugan.github.io/true-words-quiz/index.html)
 
 ## Credits
 ### Code
@@ -202,7 +214,7 @@ I discovered several interesting bugs after deployment. These were all investiga
 * The cover image was downloaded from [Pexels](https://www.pexels.com/photo/black-and-white-book-business-close-up-267669/).
 
 ### Content
-*  Question and answer content was written by the developer. Definitions were taken from the Merriam-Webster English Dictionary.
+*  Question and answer content was written by the developer. Definitions were taken or adapted from the [Dictionary by Merriam-Webster](https://www.merriam-webster.com/).
 
 ### Acknowledgements
 * I would like to thank my mentor Victor Miclovich for his excellent advice and guidance during the development of this project.
