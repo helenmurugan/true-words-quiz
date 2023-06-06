@@ -47,7 +47,7 @@ This document describes the development process for True Words Quiz. This site i
 ## User Experience
 ### User Stories
 * First Time Visitor Goals
-    * I want to do an online vocabulary quiz for fun and to test my vocabulary knowldege.
+    * I want to do an online vocabulary quiz for fun and to test my vocabulary knowledge.
     * I want to be able to play anywhere, at any time.
     * I want the site to be responsive to my device.
     * I want the site to be intuitive and easy to navigate.
@@ -84,10 +84,12 @@ During the planning stage, I used Excalidraw to create wireframes for each page 
 ![Image of wireframe for score page](/documentation/planning-3.jpg)  
 
 ## Features
+
 ### The Home Page  
 * The home page welcomes the user to the quiz and gives a short description of how to play. 
 * The user is encouraged to move to the quiz page with the "Let's Play!" button. 
 * The content is neatly contained within a white box which is consistent throughout the quiz.
+* There is a small True Words logo in the top left corner of the screen, which acts as a link back to this page.
 
 ![Image of home page](/documentation/home-page.jpg)
 
@@ -96,6 +98,7 @@ During the planning stage, I used Excalidraw to create wireframes for each page 
 * The quiz consists of a numbered definition (the question), with a button grid showing a choice of four words (the answers). 
 * The questions are shuffled at the start of each game so that each play is different.
 * The user will be asked ten questions to complete the quiz and then shown the final score.
+* There is a small True Words logo in the top left corner of the screen, which acts as a link back to the home page.
    
 ![Image of quiz area contained within a box](/documentation/quiz-container.jpg)
 
