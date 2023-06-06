@@ -76,6 +76,8 @@ This document describes the development process for True Words Quiz. This site i
 * Black, whitesmoke and silver are the main colours used. 
 * Green and red are used to provide feedback on the answer buttons and for the scores.
 
+![Image of colour palette - black, whitesmoke, silver, red and green](/documentation/colour-palette.jpg) 
+
 ### Wireframes
 During the planning stage, I used Excalidraw to create wireframes for each page and plan the structure of the site.
 
@@ -89,7 +91,7 @@ During the planning stage, I used Excalidraw to create wireframes for each page 
 * The home page welcomes the user to the quiz and gives a short description of how to play. 
 * The user is encouraged to move to the quiz page with the "Let's Play!" button. 
 * The content is neatly contained within a white box which is consistent throughout the quiz.
-* There is a small True Words logo in the top left corner of the screen, which acts as a link back to this page.
+* There is a small True Words logo in the top left corner of the screen, which acts as a link to the home page, this is consistent throughout the site.
 
 ![Image of home page](/documentation/home-page.jpg)
 
@@ -98,12 +100,11 @@ During the planning stage, I used Excalidraw to create wireframes for each page 
 * The quiz consists of a numbered definition (the question), with a button grid showing a choice of four words (the answers). 
 * The questions are shuffled at the start of each game so that each play is different.
 * The user will be asked ten questions to complete the quiz and then shown the final score.
-* There is a small True Words logo in the top left corner of the screen, which acts as a link back to the home page.
    
 ![Image of quiz area contained within a box](/documentation/quiz-container.jpg)
 
 ### Button Feedback
-* When the user hovers over a button with a mouse, the button will change from black-on-silver to silver-on-black, implemented in style.css.
+* When the user hovers over a button with a mouse, the button will change from silver-on-black to black-on-silver, implemented in style.css.
 * When the user clicks on a button, the background colour of the button will turn green if they selected the correct answer.
 * When the wrong answer is selected, the button will turn red and the correct answer button will turn green.
 * The colour-coded feedback is implemented by adding a class to the button with JavaScript and style using CSS. It allows the user to see instantly which answers are correct.
@@ -114,7 +115,7 @@ During the planning stage, I used Excalidraw to create wireframes for each page 
 ### The Score Area  
 * The score area keeps a tally of the correct and incorrect answer scores. 
 * They are colour coded in green and red which is intuitively easy to understand.
-* The scores are incremented immediately when the answer button is selected, giving instant feedback to the user. This was achieved using JavaScript for the score and CSS for the colour.
+* The scores are incremented immediately when the answer button is selected, giving instant feedback to the user.
 
 ![Image of score area](/documentation/score-area.jpg)
 
@@ -133,7 +134,7 @@ During the planning stage, I used Excalidraw to create wireframes for each page 
 
 ### Future Implementations
 * To improve the quiz, more questions should be added to the question bank array in script.js. Currently, there are 40 questions, however, more questions will reduce the chance of users seeing the same question twice. If more questions are added, the questions could be located in a separate JavaScript file to keep them neatly separated.
-* JavaScript could be used to shuffle the answer buttons so that the correct answer appears in a random position as one of the four options. This would save time when inputting more questions into the questionBank because the correct answer could be written first every time.
+* JavaScript could be used to shuffle the answer buttons so that the correct answer appears in a random position as one of the four options. This would improve the quiz for the user by making it more difficult when viewing a repeat question.
 * Different levels of difficulty could be added as a feature - typically Easy, Medium and Difficult.
 * To improve the appearance of the score page, an image or icon based on the user's score could be added using JavaScript.
 
@@ -196,6 +197,7 @@ I discovered several interesting bugs after deployment. These were all investiga
 * [Google Fonts](https://fonts.google.com/) - Used to import a font for the site.
 * [Google Developer Tools](https://developer.chrome.com/docs/) - To ensure responsiveness, check style properties and debug JavaScript code by checking for console errors.
 * [Favicon.io](https://favicon.io/) - To create a favicon.
+* [Coolors](https://coolors.co/) - To create a colour palette for the site.
 
 ## Deployment
 * The site was deployed to GitHub pages by the following steps:
