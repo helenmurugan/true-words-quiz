@@ -4,9 +4,6 @@ By Helen Murugan
 
 [View the live site here](https://helenmurugan.github.io/true-words-quiz/index.html)
 
-
-This document describes the development process for True Words Quiz. This site is for educational purposes only, as my second portfolio project for a Diploma in Full Stack Software Development (E-Commerce Applications) with Code Institute. I used HTML, CSS and JavaScript to build an interactive frontend site, allowing users to actively engage with data on the site.
-
 ![Screen generator image showing True Words Quiz on different sized devices](/documentation/screen-generator.jpg)
 
 * True Words Quiz is a fully responsive JavaScript vocabulary quiz, aimed at people who love vocabulary and want to test their knowledge. 
